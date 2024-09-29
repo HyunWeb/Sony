@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이윤진</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: gray;
+        font-family: "Arial", sans-serif;
+        background-color: white;
         margin: 0;
         padding: 0;
       }
@@ -16,65 +16,107 @@
         background-color: black;
         color: white;
         text-align: center;
-        padding: 20px 0;
+        padding: 50px 0;
+        font-size: 3em;
+        font-weight: bold;
       }
 
       .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 10px;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .box {
-        margin: 0 10px;
-        padding: 20px;
-        background-color: lightgray;
-        border: 1px solid;
+        background-color: lightgrey;
+        padding: 40px;
         border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+      }
+
+      .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .inner-box-container {
         display: flex;
         justify-content: space-between;
-        min-width: 148px;
-        white-space: nowrap;
+        align-items: flex-start;
+      }
+
+      .inner-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(50% - 10px);
+        text-align: center;
       }
 
       h1 {
-        font-size: 40px;
-        margin-bottom: 20px;
+        font-size: 1.5em;
+        margin-bottom: 10px;
       }
 
       p {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 10;
+        font-size: 1em;
         color: black;
+        margin: 10px 0;
       }
 
-      p:hover {
-        color: white;
-        cursor: pointer;
+      @media (max-width: 768px) {
+        .inner-box {
+          width: 100%;
+          margin-bottom: 10px;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>SONY</h1>
-    </header>
+    <header>SONY</header>
     <div class="container">
       <div class="box">
-        <div><p>LADC</p></div>
-        <div><p>설명1</p></div>
+        <div class="inner-box-container">
+          <div class="inner-box">
+            <h1>LADC</h1>
+            <p>이미지</p>
+          </div>
+          <div class="inner-box">
+            <h1>상세 설명</h1>
+            <p>고해상도 오디오</p>
+          </div>
+        </div>
       </div>
+
       <div class="box">
-        <div><p>노이즈 캔슬링</p></div>
-        <div><p>설명2</p></div>
+        <div class="inner-box-container">
+          <div class="inner-box">
+            <h1>노이즈 캔슬링</h1>
+            <p>이미지</p>
+          </div>
+          <div class="inner-box">
+            <h1>상세 설명</h1>
+            <p>최적의 소음 차단</p>
+          </div>
+        </div>
       </div>
+
       <div class="box">
-        <div><p>360도</p></div>
-        <div><p>설명3</p></div>
+        <div class="inner-box-container">
+          <div class="inner-box">
+            <h1>360도</h1>
+            <p>이미지</p>
+          </div>
+          <div class="inner-box">
+            <h1>상세 설명</h1>
+            <p>몰입형 사운드</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
