@@ -1,40 +1,7 @@
-/* 300 두께 (얇은 폰트) */
-@font-face {
-  font-family: "GmarketSans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
-    format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* 500 두께 (보통 두께) */
-@font-face {
-  font-family: "GmarketSans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* 700 두께 (굵은 폰트) */
-@font-face {
-  font-family: "GmarketSans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
-    format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tahu!";
-  src: url("../fonts/Tahu.woff") format("woff"),
-    url("../fonts/Tahu.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 html {
   color: #3b3b3b;
   background-color: #dadada;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
 }
 #mainPage {
   height: 100vh;
@@ -123,6 +90,7 @@ html {
 }
 #bestseller > h2 {
   margin: 3% 0 7% 0;
+  font-weight: 700;
 }
 #bestsellerWrap {
   display: flex;
@@ -152,16 +120,20 @@ html {
 .box > h3 {
   font-size: 30px;
   margin: 30% 0 5% 0;
+  font-weight: 500;
 }
 .box > p {
   font-size: 20px;
   margin-bottom: 10%;
+  font-weight: 300;
 }
 .button {
   background-color: #f3f3f3;
   outline: none;
   border-radius: 15px;
   border: none;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
+  font-weight: 500;
   font-size: 20px;
   color: #3b3b3b;
   padding: 7px 30px;
