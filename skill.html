@@ -14,12 +14,39 @@
       }
 
       header {
-        background-color: black;
-        color: white;
+        background-color: #ececec;
+        color: black;
         text-align: center;
-        padding: 50px 0;
-        font-size: 3em;
+        padding: 20px 0;
+        font-size: 2em;
         font-weight: bold;
+      }
+
+      .skills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: relative;
+        height: 500px;
+        margin-top: 50px;
+      }
+
+      .skill-title {
+        font-family: "Gmarket Sans", sans-serif;
+        font-weight: 500;
+        font-size: 128px;
+        line-height: 140px;
+        letter-spacing: 0.1em;
+        color: #3f3f3f;
+        margin-bottom: 20px;
+      }
+
+      .product-image {
+        width: 400px;
+        height: 400px;
+        background-size: cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       }
 
       .container {
@@ -82,6 +109,8 @@
       h3 {
         font-size: 1.2em;
         margin-bottom: 10px;
+        text-align: center;
+        color: white;
       }
 
       p {
@@ -90,28 +119,78 @@
         margin: 10px 0;
       }
 
+      .section {
+        width: 100%;
+        height: 800px;
+        background-color: #3f3f3f;
+        border-radius: 52px 52px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        margin-top: 50px;
+      }
+
+      .icon-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .icon {
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+
       @media (max-width: 768px) {
         .inner-box {
           width: 100%;
           margin-bottom: 10px;
         }
       }
+
+      @media (max-width: 768px) {
+        .icon-container {
+          flex-direction: row;
+        }
+
+        .icon {
+          margin-bottom: 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <header>SONY</header>
+    <section class="skills">
+      <div class="skill-title">Skill of SONY</div>
+      <div class="product-image">
+        <img src="./이미지/skillMain.png" alt="skill" />
+      </div>
+    </section>
+
     <section>
       <h1>Sony's Technology</h1>
       <div class="container">
         <div class="box">
           <div class="inner-box-container">
             <div class="inner-box">
-              <img src="./ldac.jpg" alt="LDAC 기술 이미지" />
+              <img src="./img/ldac.jpg" alt="LDAC 기술 이미지" />
             </div>
             <div class="inner-box">
               <h2>LDAC Codec</h2>
-              <h3>"고해상도 고음질 오디오의 풍성한 경험"</h3>
-              <p>Sony만의 LDAC 코덱을 사용해봐</p>
+              <h2>"고해상도 고음질 오디오의 풍성한 경험"</h2>
+              <p>Sony만의 LDAC 코덱을 사용해봐!</p>
               <p>
                 24 bit / 96 kHz 고해상도 오디오를 스트리밍을 사용해보는 경험을
                 할 수 있습니다.
@@ -123,12 +202,12 @@
         <div class="box">
           <div class="inner-box-container reverse">
             <div class="inner-box">
-              <img src="./노이즈 캔슬링.jpg" alt="노이즈 캔슬링 기술 이미지" />
+              <img src="./img/noise.jpg" alt="노이즈 캔슬링 기술 이미지" />
             </div>
             <div class="inner-box">
               <h2>Noise Canceling</h2>
-              <h3>"잡음 없이 하루 종일 편안하게 즐기는 음악"</h3>
-              <p>생활 소음, 주변 잡음과 이제 안녕</p>
+              <h2>"잡음 없이 하루 종일 편안하게 즐기는 음악"</h2>
+              <p>생활 소음, 주변 잡음과 이제 안녕!</p>
               <p>
                 듀얼 노이즈 센서 기술을 통해 풍성한 음악을 들을 수 있습니다.
               </p>
@@ -139,12 +218,12 @@
         <div class="box">
           <div class="inner-box-container">
             <div class="inner-box">
-              <img src="./360도.png" alt="360도 오디오 기술 이미지" />
+              <img src="./img/audio.png" alt="360도 오디오 기술 이미지" />
             </div>
             <div class="inner-box">
               <h2>360 Reality Audio</h2>
-              <h3>"놀랍도록 사실적이고 몰입적인 사운드"</h3>
-              <p>모든 방향에서 울려 퍼지는 사운드에 흠뻑 빠져 보자</p>
+              <h2>"놀랍도록 사실적이고 몰입적인 사운드"</h2>
+              <p>모든 방향에서 울려 퍼지는 사운드에 흠뻑 빠져 보자!</p>
               <p>
                 머리 전체를 둘러싼 많은 포인트에서 생성된 다양한 사운드를 즐길
                 수 있습니다.
@@ -156,7 +235,7 @@
         <div class="box">
           <div class="inner-box-container reverse">
             <div class="inner-box">
-              <img src="./소니.png" alt="소니 환경" />
+              <img src="./img/sony.png" alt="소니 환경" />
             </div>
             <div class="inner-box">
               <h2>건전한 환경 계획</h2>
@@ -172,8 +251,29 @@
       </div>
     </section>
 
-    <section>
-      <h1>호환 가능한 음악 스트리밍 서비스</h1>
+    <section class="section">
+      <h1 style="color: white">호환 가능한 음악 스트리밍 서비스</h1>
+      <hr />
+      <hr />
+      <hr />
+      <div class="icon-container">
+        <div>
+          <img src="./img/app1.png" alt="Amazon Music Icon" class="icon" />
+          <h3>Amazon Music Unlimited</h3>
+        </div>
+        <div>
+          <img src="./img/app2.png" alt="Nugs.net Icon" class="icon" />
+          <h3>nugs.net</h3>
+        </div>
+        <div>
+          <img src="./img/app3.png" alt="PeerTracks Icon" class="icon" />
+          <h3>PeerTracks</h3>
+        </div>
+        <div>
+          <img src="./img/app4.png" alt="360 Reality Audio Icon" class="icon" />
+          <h3>360 Reality Audio Live</h3>
+        </div>
+      </div>
     </section>
 
     <script>
