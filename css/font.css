@@ -1,0 +1,34 @@
+/* 300 두께 (얇은 폰트) */
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 500 두께 (보통 두께) */
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 700 두께 (굵은 폰트) */
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tahu!";
+  src: url("../fonts/Tahu.woff") format("woff"),
+    url("../fonts/Tahu.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

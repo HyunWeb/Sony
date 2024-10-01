@@ -1,40 +1,32 @@
-/* 300 두께 (얇은 폰트) */
-@font-face {
-  font-family: "GmarketSans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
-    format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* 500 두께 (보통 두께) */
-@font-face {
-  font-family: "GmarketSans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
+.button {
+  background-color: #f3f3f3;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
   font-weight: 500;
-  font-style: normal;
+  font-size: 17px;
+  color: #3b3b3b;
+  padding: 8px 30px;
+  cursor: pointer;
+  transition-duration: 200ms;
 }
-
-/* 700 두께 (굵은 폰트) */
-@font-face {
-  font-family: "GmarketSans";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
-    format("woff");
-  font-weight: 700;
-  font-style: normal;
+.lg-button {
+  padding: 15px 30px;
+  border-radius: 18px;
 }
-@font-face {
-  font-family: "Tahu!";
-  src: url("../fonts/Tahu.woff") format("woff"),
-    url("../fonts/Tahu.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.button:hover {
+  background-color: #1e3990;
+  color: white;
 }
 html {
   color: #3b3b3b;
   background-color: #dadada;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
+}
+h2 {
+  font-weight: 700;
+  font-size: 30px;
 }
 #mainPage {
   height: 100vh;
@@ -128,7 +120,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: end;
-  margin-bottom: 10%;
+  margin-bottom: 21%;
 }
 .box {
   text-align: center;
@@ -150,22 +142,14 @@ html {
   background-size: 210px;
 }
 .box > h3 {
-  font-size: 30px;
+  font-size: 23px;
   margin: 30% 0 5% 0;
+  font-weight: 500;
 }
 .box > p {
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 10%;
-}
-.button {
-  background-color: #f3f3f3;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  font-size: 20px;
-  color: #3b3b3b;
-  padding: 7px 30px;
-  cursor: pointer;
+  font-weight: 300;
 }
 .box:nth-child(1) > img {
   width: 245px;
@@ -183,10 +167,119 @@ html {
 }
 #bestseller::after {
   content: "Do you dream in Sony?";
-  font-family: "Tahu!";
+  font-family: "Tahu!", Arial, Helvetica, sans-serif;
   font-size: 115px;
   position: absolute;
   color: #c4c4c4;
   right: 2%;
+  bottom: -30%;
   letter-spacing: 15px;
+}
+#skillSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+#skillSection > img {
+  width: 600px;
+  border-radius: 45px;
+}
+#skillSection > div {
+  padding-top: 3%;
+  margin-left: 7%;
+  width: 23%;
+}
+#skillSection > div > h2 {
+  margin-bottom: 5%;
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+#skillSection > div > h2 > span {
+  position: relative;
+  /* js 포인트 */
+  top: 110%;
+  top: 0%;
+  transition-duration: 400ms;
+}
+#textBox {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 5%;
+}
+#textBox > p {
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+#textBox > p > span {
+  position: inherit;
+  /* js포인트 */
+  top: 0%;
+  /* top: 110%; */
+  transition-duration: 400ms;
+}
+#companySection {
+  background-color: #3f3f3f;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  position: relative;
+  background-image: url("../img/name.png");
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+}
+#companySection > img {
+  width: 307px;
+}
+#companySection > div {
+  font-weight: 300;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4%;
+}
+#companySection > div > button {
+  align-self: flex-start;
+}
+#companySection > div > h2 {
+  margin-bottom: 4%;
+}
+#speechBox {
+  margin-bottom: 3%;
+}
+#speechBox > p {
+  font-size: 23px;
+  line-height: 30px;
+}
+#speechBox + span {
+  font-size: 20px;
+  margin-bottom: 4%;
+}
+#speechBox + span > b {
+  font-weight: 500;
+}
+footer {
+  padding: 2% 1%;
+  height: 100px;
+  background-color: #3f3f3f;
+  border-top: 2px solid #dadada;
+  color: #dadada;
+  font-size: 12px;
+}
+footer > div {
+  margin-bottom: 15px;
+}
+footer > div > a {
+  text-decoration: none;
+  color: inherit;
+}
+footer > span {
+  display: block;
+  margin-bottom: 10px;
+}
+footer > p {
+  line-height: 20px;
 }
