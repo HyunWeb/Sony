@@ -1,7 +1,32 @@
+.button {
+  background-color: #f3f3f3;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #3b3b3b;
+  padding: 8px 30px;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.lg-button {
+  padding: 15px 30px;
+  border-radius: 18px;
+}
+.button:hover {
+  background-color: #1e3990;
+  color: white;
+}
 html {
   color: #3b3b3b;
   background-color: #dadada;
   font-family: GmarketSans, "Times New Roman", Times, serif;
+}
+h2 {
+  font-weight: 700;
+  font-size: 30px;
 }
 #mainPage {
   height: 100vh;
@@ -90,13 +115,12 @@ html {
 }
 #bestseller > h2 {
   margin: 3% 0 7% 0;
-  font-weight: 700;
 }
 #bestsellerWrap {
   display: flex;
   justify-content: space-around;
   align-items: end;
-  margin-bottom: 10%;
+  margin-bottom: 21%;
 }
 .box {
   text-align: center;
@@ -118,26 +142,14 @@ html {
   background-size: 210px;
 }
 .box > h3 {
-  font-size: 30px;
+  font-size: 23px;
   margin: 30% 0 5% 0;
   font-weight: 500;
 }
 .box > p {
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 10%;
   font-weight: 300;
-}
-.button {
-  background-color: #f3f3f3;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  font-family: GmarketSans, "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #3b3b3b;
-  padding: 7px 30px;
-  cursor: pointer;
 }
 .box:nth-child(1) > img {
   width: 245px;
@@ -155,10 +167,119 @@ html {
 }
 #bestseller::after {
   content: "Do you dream in Sony?";
-  font-family: "Tahu!";
+  font-family: "Tahu!", Arial, Helvetica, sans-serif;
   font-size: 115px;
   position: absolute;
   color: #c4c4c4;
   right: 2%;
+  bottom: -30%;
   letter-spacing: 15px;
+}
+#skillSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+#skillSection > img {
+  width: 600px;
+  border-radius: 45px;
+}
+#skillSection > div {
+  padding-top: 3%;
+  margin-left: 7%;
+  width: 23%;
+}
+#skillSection > div > h2 {
+  margin-bottom: 5%;
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+#skillSection > div > h2 > span {
+  position: relative;
+  /* js 포인트 */
+  top: 110%;
+  top: 0%;
+  transition-duration: 400ms;
+}
+#textBox {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 5%;
+}
+#textBox > p {
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+#textBox > p > span {
+  position: inherit;
+  /* js포인트 */
+  top: 0%;
+  /* top: 110%; */
+  transition-duration: 400ms;
+}
+#companySection {
+  background-color: #3f3f3f;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  position: relative;
+  background-image: url("../img/name.png");
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+}
+#companySection > img {
+  width: 307px;
+}
+#companySection > div {
+  font-weight: 300;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4%;
+}
+#companySection > div > button {
+  align-self: flex-start;
+}
+#companySection > div > h2 {
+  margin-bottom: 4%;
+}
+#speechBox {
+  margin-bottom: 3%;
+}
+#speechBox > p {
+  font-size: 23px;
+  line-height: 30px;
+}
+#speechBox + span {
+  font-size: 20px;
+  margin-bottom: 4%;
+}
+#speechBox + span > b {
+  font-weight: 500;
+}
+footer {
+  padding: 2% 1%;
+  height: 100px;
+  background-color: #3f3f3f;
+  border-top: 2px solid #dadada;
+  color: #dadada;
+  font-size: 12px;
+}
+footer > div {
+  margin-bottom: 15px;
+}
+footer > div > a {
+  text-decoration: none;
+  color: inherit;
+}
+footer > span {
+  display: block;
+  margin-bottom: 10px;
+}
+footer > p {
+  line-height: 20px;
 }
