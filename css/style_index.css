@@ -360,3 +360,112 @@ footer > p {
     transform: translateY(0); /* 시작 위치 */
   }
 }
+
+#popup {
+  width: 80%;
+  height: 72%;
+  position: absolute;
+  top: 148vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #f0f0f0;
+  opacity: 0.93;
+  border-radius: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition-duration: 300ms;
+}
+#popup > button {
+  font-size: 30px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+#popup > button:hover {
+  transform: rotate(180deg);
+}
+#popup > button > span {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+#popup > div:first-of-type > img {
+  width: 550px;
+  display: block;
+}
+.productPopup {
+  text-align: left;
+  position: relative;
+  margin-right: 30px;
+  transition-duration: 500ms;
+}
+.productPopup > b {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.productPopup > h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+.productPopup > p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.productPopup > strong {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.productPopup > form {
+  margin-top: 20px;
+}
+.productPopup > form > label {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.productPopup > form > * {
+  display: block;
+}
+.productPopup > form > select {
+  width: 100%;
+  padding: 7px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.productPopup > form > button {
+  background-color: #3f3f3f;
+  color: #f3f3f3;
+}
+.productPopup > form > button:hover {
+  background-color: #1e3990;
+  color: #f3f3f3;
+}
+.productPopup > form > div {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 300;
+  border-top: 2px solid #3f3f3f;
+  padding: 15px 0;
+}
+.productPopup > form > div > span {
+  font-size: 25px;
+  font-weight: 700;
+
+  position: relative;
+  right: -10px;
+}

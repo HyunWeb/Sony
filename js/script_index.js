@@ -64,7 +64,7 @@ window.addEventListener("load", function () {
       skillTitleData.top <= this.window.innerHeight &&
       skillTitleData.bottom > 0
     ) {
-      skillTitle.style.top = "0";
+      skillTitle.style.top = "5px";
       skillimage.style.transform = "translate(0, 0)";
     } else {
       skillTitle.style.top = "";
@@ -88,7 +88,7 @@ window.addEventListener("load", function () {
       companyTitleData.top <= this.window.innerHeight &&
       companyTitleData.bottom > 0
     ) {
-      companyTitle.style.top = "0";
+      companyTitle.style.top = "5px";
     } else {
       companyTitle.style.top = "";
     }

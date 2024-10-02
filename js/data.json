@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "src": "/img/product1.png",
+    "alt": "이어폰 제품 사진",
+    "tag": "# 노이즈 캔슬링 # 360 Reality Audio",
+    "name": "WF-1000XM5",
+    "ment": "Your New Colour, Smoky Pink",
+    "price": "359,000원",
+    "product": [
+      {
+        "value": "earphone pink",
+        "label": "WF-1000XM5 스모키 핑크"
+      },
+      {
+        "value": "earphone white",
+        "label": "WF-1000XM5 화이트"
+      },
+      {
+        "value": "earphone black",
+        "label": "WF-1000XM5 블랙"
+      }
+    ]
+  }
+]
