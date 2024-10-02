@@ -45,6 +45,7 @@
             <button class="button">자세히 보기</button>
           </div>
         </div>
+        <!-- 팝업 창 -->
         <article id="popup">
           <button><span>닫기버튼</span>X</button>
           <div class="imgContainer"></div>
@@ -52,38 +53,21 @@
             <form>
               <label for="product">제품 선택</label>
               <select name="product" id="product">
-                <option value="" selected>제품을 선택하세요</option>
+                <option value="" selected disabled>제품을 선택하세요</option>
               </select>
-              <div>총 금액 <span>359,000 원</span></div>
+              <label for="count">갯수</label>
+              <div id="countButtonBox">
+                <button type="button">-</button>
+                <span>1</span>
+                <button type="button">+</button>
+              </div>
+              <div>총 금액 <span></span></div>
               <button type="button" class="button lg-button">
                 장바구니에 담기
               </button>
             </form>
           </div>
         </article>
-        <!-- <article id="popup">
-          <button><span>닫기버튼</span>X</button>
-          <div><img src="/img/product1.png" alt="이어폰 제품 사진" /></div>
-          <div class="productPopup">
-            <b># 노이즈 캔슬링 # 360 Reality Audio</b>
-            <h3>WF-1000XM5</h3>
-            <p>Your New Colour, Smoky Pink</p>
-            <strong>359,000원</strong>
-            <form>
-              <label for="product">제품 선택</label>
-              <select name="product" id="product">
-                <option value="" selected>제품을 선택하세요</option>
-                <option value="earphone pink">WF-1000XM5 스모키 핑크</option>
-                <option value="earphone white">WF-1000XM5 화이트</option>
-                <option value="earphone black">WF-1000XM5 블랙</option>
-              </select>
-              <div>총 금액 <span>359,000 원</span></div>
-              <button type="button" class="button lg-button">
-                장바구니에 담기
-              </button>
-            </form>
-          </div>
-        </article> -->
       </section>
       <section id="skillSection">
         <div>
