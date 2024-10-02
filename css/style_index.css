@@ -24,6 +24,9 @@ html {
   background-color: #dadada;
   font-family: GmarketSans, "Times New Roman", Times, serif;
 }
+main {
+  overflow: hidden;
+}
 h2 {
   font-weight: 700;
   font-size: 30px;
@@ -42,8 +45,6 @@ h2 {
   position: absolute;
   top: 25%;
   left: 23%;
-  /* box-shadow: 2px 2px 10px #b8b8b8;
-  border-radius: 50%; */
 }
 #mainPage > img:nth-child(2) {
   position: absolute;
@@ -114,10 +115,17 @@ h2 {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  position: relative;
 }
 #bestseller > h2 {
   margin: 3% 0 7% 0;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+}
+#bestseller > h2 > span {
+  position: relative;
+  top: 110%;
+  transition-duration: 400ms;
 }
 #bestsellerWrap {
   display: flex;
@@ -139,6 +147,12 @@ h2 {
 .box:nth-child(2) {
   background-position: 50% 75%;
   background-size: 207px;
+
+  width: 228px;
+  height: 592px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .box:nth-child(3) {
   background-position: 50% 62%;
@@ -156,36 +170,48 @@ h2 {
 }
 .box:nth-child(1) > img {
   width: 245px;
+  transition-duration: 500ms;
+  transform: translate(0, 50px) scale(0.8);
 }
 .box:nth-child(2) > img {
   width: 200px;
   display: block;
   margin: auto;
-  transform: translate(0, 0) scale(1);
-  transform: translate(0, -210%) scale(127%);
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(127%);
   transition-duration: 1000ms;
+}
+.box:nth-child(2) > button {
+  align-self: center;
 }
 .box:nth-child(3) > img {
   width: 165px;
+  transition-duration: 500ms;
+  transform: translate(0, 50px) scale(0.8);
 }
-#bestseller::after {
+#skillSection::before {
   content: "Do you dream in Sony?";
   font-family: "Tahu!", Arial, Helvetica, sans-serif;
   font-size: 115px;
   position: absolute;
   color: #c4c4c4;
   right: 2%;
-  bottom: -30%;
+  top: -50%;
   letter-spacing: 15px;
 }
 #skillSection {
   display: flex;
   justify-content: center;
   margin-bottom: 15%;
+  position: relative;
 }
 #skillSection > img {
   width: 600px;
   border-radius: 45px;
+  transform: translate(100vw, 0);
+  transition-duration: 700ms;
 }
 #skillSection > div {
   padding-top: 3%;
@@ -202,7 +228,6 @@ h2 {
   position: relative;
   /* js 포인트 */
   top: 110%;
-  top: 0%;
   transition-duration: 400ms;
 }
 #textBox {
@@ -218,8 +243,7 @@ h2 {
 #textBox > p > span {
   position: inherit;
   /* js포인트 */
-  top: 0%;
-  /* top: 110%; */
+  top: 110%;
   transition-duration: 400ms;
 }
 #companySection {
@@ -249,6 +273,14 @@ h2 {
 }
 #companySection > div > h2 {
   margin-bottom: 4%;
+  position: relative;
+  overflow: hidden;
+  height: 37px;
+}
+#companySection > div > h2 > span {
+  position: relative;
+  top: 110%;
+  transition-duration: 400ms;
 }
 #speechBox {
   margin-bottom: 3%;
@@ -256,6 +288,14 @@ h2 {
 #speechBox > p {
   font-size: 23px;
   line-height: 30px;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+}
+#speechBox > p > span {
+  position: relative;
+  top: 110%;
+  transition-duration: 400ms;
 }
 #speechBox + span {
   font-size: 20px;
@@ -287,26 +327,34 @@ footer > p {
   line-height: 20px;
 }
 #mainPage > img:nth-child(1) {
-  animation: move 8s infinite;
+  animation: move 5s infinite;
 }
 #mainPage > img:nth-child(2) {
-  animation: move 8s 1s infinite;
+  animation: move2 7s infinite;
 }
 #mainPage > img:nth-child(3) {
-  animation: move 8s 3s infinite;
+  animation: move 8s infinite;
 }
 #mainPage > img:nth-child(4) {
-  animation: move 8s 2s infinite;
-}
-#mainPage > img:nth-child(5) {
-  animation: move 8s 4s infinite;
+  animation: move2 6s infinite;
 }
 @keyframes move {
   from {
     transform: translateY(0); /* 시작 위치 */
   }
   50% {
-    transform: translateY(100%); /* 끝 위치 */
+    transform: translateY(50%); /* 끝 위치 */
+  }
+  to {
+    transform: translateY(0); /* 시작 위치 */
+  }
+}
+@keyframes move2 {
+  from {
+    transform: translateY(0); /* 시작 위치 */
+  }
+  50% {
+    transform: translateY(-50%); /* 끝 위치 */
   }
   to {
     transform: translateY(0); /* 시작 위치 */
