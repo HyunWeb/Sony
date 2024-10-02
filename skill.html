@@ -3,263 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/skill.css" />
+    <script src="./js/skill.js"></script>
+
     <title>이윤진</title>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: lightgray;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-      }
-
-      header {
-        background-color: #ececec;
-        color: black;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 2em;
-        font-weight: bold;
-      }
-
-      .skills {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        position: relative;
-        height: 500px;
-        margin-top: 50px;
-      }
-
-      .skill-title {
-        font-family: "Gmarket Sans", sans-serif;
-        font-weight: 500;
-        font-size: 128px;
-        line-height: 140px;
-        letter-spacing: 0.1em;
-        color: #3f3f3f;
-        margin-bottom: 20px;
-      }
-
-      .product-image {
-        width: 400px;
-        height: 400px;
-        background-size: cover;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 40px auto;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .box {
-        background-color: lightgray;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        transform: translateY(50px);
-        opacity: 0;
-        transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
-      }
-
-      .box.visible {
-        transform: translateY(0);
-        opacity: 1;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      .inner-box-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-      }
-
-      .inner-box {
-        margin-left: 20px;
-        text-align: center;
-      }
-
-      .reverse {
-        flex-direction: row-reverse;
-      }
-
-      img {
-        width: 300px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      h1 {
-        font-size: 2em;
-        margin-top: 50px;
-        text-align: center;
-      }
-
-      h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-
-      h3 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        text-align: center;
-        color: white;
-      }
-
-      p {
-        font-size: 1em;
-        color: black;
-        margin: 10px 0;
-      }
-
-      .section {
-        width: 100%;
-        height: 800px;
-        background-color: #3f3f3f;
-        border-radius: 52px 52px 0px 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 40px;
-        margin-top: 50px;
-      }
-
-      .icon-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .icon {
-        width: 150px;
-        height: 150px;
-        background-color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .inner-box {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .icon-container {
-          flex-direction: row;
-        }
-
-        .icon {
-          margin-bottom: 20px;
-        }
-      }
-    </style>
   </head>
+
   <body>
     <header>SONY</header>
     <section class="skills">
-      <div class="skill-title">Skill of SONY</div>
+      <div class="skill-title">
+        Skill <br />
+        of <br />
+        SONY
+      </div>
       <div class="product-image">
-        <img src="./img/skillMain.png" alt="skill" />
+        <img src="./img/skillMain.png" alt="skill" style="width: 400px" />
+      </div>
+    </section>
+
+    <h1>Sony's Technology</h1>
+    <br />
+    <br />
+    <br />
+    <section>
+      <div class="box">
+        <div class="inner-box-container">
+          <div class="inner-box">
+            <img
+              src="./img/ldac.jpg"
+              alt="LDAC 기술 이미지"
+              style="width: 400px"
+            />
+          </div>
+          <div class="inner-box">
+            <h2>LDAC Codec</h2>
+            <h2>"고해상도 고음질 오디오의 풍성한 경험"</h2>
+            <p>Sony만의 LDAC 코덱을 사용해봐!</p>
+            <p>
+              24 bit / 96 kHz 고해상도 오디오를 스트리밍을 사용해보는 경험을 할
+              수 있습니다.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section>
-      <h1>Sony's Technology</h1>
-      <div class="container">
-        <div class="box">
-          <div class="inner-box-container">
-            <div class="inner-box">
-              <img src="./img/ldac.jpg" alt="LDAC 기술 이미지" />
-            </div>
-            <div class="inner-box">
-              <h2>LDAC Codec</h2>
-              <h2>"고해상도 고음질 오디오의 풍성한 경험"</h2>
-              <p>Sony만의 LDAC 코덱을 사용해봐!</p>
-              <p>
-                24 bit / 96 kHz 고해상도 오디오를 스트리밍을 사용해보는 경험을
-                할 수 있습니다.
-              </p>
-            </div>
+      <div class="box">
+        <div class="inner-box-container reverse">
+          <div class="inner-box">
+            <img
+              src="./img/noise.jpg"
+              alt="노이즈 캔슬링 기술 이미지"
+              style="width: 400px"
+            />
+          </div>
+          <div class="inner-box">
+            <h2>Noise Canceling</h2>
+            <h2>"잡음 없이 하루 종일 편안하게 즐기는 음악"</h2>
+            <p>생활 소음, 주변 잡음과 이제 안녕!</p>
+            <p>듀얼 노이즈 센서 기술을 통해 풍성한 음악을 들을 수 있습니다.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="box">
-          <div class="inner-box-container reverse">
-            <div class="inner-box">
-              <img src="./img/noise.jpg" alt="노이즈 캔슬링 기술 이미지" />
-            </div>
-            <div class="inner-box">
-              <h2>Noise Canceling</h2>
-              <h2>"잡음 없이 하루 종일 편안하게 즐기는 음악"</h2>
-              <p>생활 소음, 주변 잡음과 이제 안녕!</p>
-              <p>
-                듀얼 노이즈 센서 기술을 통해 풍성한 음악을 들을 수 있습니다.
-              </p>
-            </div>
+    <section>
+      <div class="box">
+        <div class="inner-box-container">
+          <div class="inner-box">
+            <img
+              src="./img/audio.png"
+              alt="360도 오디오 기술 이미지"
+              style="width: 400px"
+            />
+          </div>
+          <div class="inner-box">
+            <h2>360 Reality Audio</h2>
+            <h2>"놀랍도록 사실적이고 몰입적인 사운드"</h2>
+            <p>모든 방향에서 울려 퍼지는 사운드에 흠뻑 빠져 보자!</p>
+            <p>
+              머리 전체를 둘러싼 많은 포인트에서 생성된 다양한 사운드를 즐길 수
+              있습니다.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="box">
-          <div class="inner-box-container">
-            <div class="inner-box">
-              <img src="./img/audio.png" alt="360도 오디오 기술 이미지" />
-            </div>
-            <div class="inner-box">
-              <h2>360 Reality Audio</h2>
-              <h2>"놀랍도록 사실적이고 몰입적인 사운드"</h2>
-              <p>모든 방향에서 울려 퍼지는 사운드에 흠뻑 빠져 보자!</p>
-              <p>
-                머리 전체를 둘러싼 많은 포인트에서 생성된 다양한 사운드를 즐길
-                수 있습니다.
-              </p>
-            </div>
+    <section>
+      <div class="box" style="background-color: white">
+        <div class="inner-box-container reverse">
+          <div class="inner-box">
+            <img src="./img/sony.png" alt="소니 환경" style="width: 500px" />
           </div>
-        </div>
-
-        <div class="box">
-          <div class="inner-box-container reverse">
-            <div class="inner-box">
-              <img src="./img/sony.png" alt="소니 환경" />
-            </div>
-            <div class="inner-box">
-              <h2>건전한 환경 계획</h2>
-              <p>
-                당사의 헤드폰은 고품질 디자인과 사운드를 위해 설계되었으며,
-                환경도 염두에 두고 있습니다. 당사의 Green Management 2025 환경
-                목표에 따라 Sony는 제품과 포장 모두에서 환경 의식적인 개발을
-                계속 추구합니다.
-              </p>
-            </div>
+          <div class="inner-box">
+            <h2>건전한 환경 계획</h2>
+            <p>
+              당사의 헤드폰은 고품질 디자인과 사운드를 위해 설계되었으며, 환경도
+              염두에 두고 있습니다. <br />
+              당사의 Green Management 2025 환경 목표에 따라 Sony는 제품과 포장
+              모두에서 환경 의식적인 개발을 계속 추구합니다.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h1 style="color: white">호환 가능한 음악 스트리밍 서비스</h1>
-      <hr />
-      <hr />
-      <hr />
+      <h2>호환 가능한 음악 스트리밍 서비스</h2>
       <div class="icon-container">
         <div>
           <img src="./img/app1.png" alt="Amazon Music Icon" class="icon" />
-          <h3>Amazon Music Unlimited</h3>
+          <h3>
+            Amazon Music <br />
+            Unlimited
+          </h3>
         </div>
         <div>
           <img src="./img/app2.png" alt="Nugs.net Icon" class="icon" />
@@ -271,26 +133,12 @@
         </div>
         <div>
           <img src="./img/app4.png" alt="360 Reality Audio Icon" class="icon" />
-          <h3>360 Reality Audio Live</h3>
+          <h3>
+            360 Reality <br />
+            Audio Live
+          </h3>
         </div>
       </div>
     </section>
-
-    <script>
-      const boxes = document.querySelectorAll(".box");
-
-      function handleScroll() {
-        boxes.forEach((box) => {
-          const boxTop = box.getBoundingClientRect().top;
-          const triggerPoint = window.innerHeight / 1.2;
-
-          if (boxTop < triggerPoint) {
-            box.classList.add("visible");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", handleScroll);
-    </script>
   </body>
 </html>
