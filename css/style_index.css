@@ -1,28 +1,5 @@
-.button {
-  background-color: #f3f3f3;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  font-family: GmarketSans, "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-size: 17px;
-  color: #3b3b3b;
-  padding: 8px 30px;
-  cursor: pointer;
-  transition-duration: 200ms;
-}
-.lg-button {
-  padding: 15px 30px;
-  border-radius: 18px;
-}
-.button:hover {
-  background-color: #1e3990;
-  color: white;
-}
-html {
-  color: #3b3b3b;
-  background-color: #dadada;
-  font-family: GmarketSans, "Times New Roman", Times, serif;
+header {
+  height: 58px;
 }
 main {
   overflow: hidden;
@@ -303,28 +280,6 @@ h2 {
 }
 #speechBox + span > b {
   font-weight: 500;
-}
-footer {
-  padding: 2% 1%;
-  height: 100px;
-  background-color: #3f3f3f;
-  border-top: 2px solid #dadada;
-  color: #dadada;
-  font-size: 12px;
-}
-footer > div {
-  margin-bottom: 15px;
-}
-footer > div > a {
-  text-decoration: none;
-  color: inherit;
-}
-footer > span {
-  display: block;
-  margin-bottom: 10px;
-}
-footer > p {
-  line-height: 20px;
 }
 #mainPage > img:nth-child(1) {
   animation: move 5s infinite;

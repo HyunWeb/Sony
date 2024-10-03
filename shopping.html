@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/nav_footer.css" />
+    <link rel="stylesheet" href="./css/shopping.css" />
+    <script src="./js/nav_footer.js"></script>
+    <script type="module" src="./js/shopping.js"></script>
+    <title>SONY 장바구니</title>
+  </head>
+  <body>
+    <header class="shopHeader shop">
+      <h1>장바구니</h1>
+      <div>
+        <button>전체 삭제</button>
+        <p><span class="countOFItemElement">0</span> 개의 상품이 있습니다.</p>
+      </div>
+    </header>
+    <main>
+      <section class="shopList shop">
+        <h2>배송 상품</h2>
+        <ul class="itemList"></ul>
+        <div class="calculatePrice">
+          <p>
+            상품 금액 <span>0원</span> <br />
+            할인 금액 0원<br />
+            배송비 2,500원
+          </p>
+          <strong>결제 예상 <span>0원</span></strong>
+        </div>
+      </section>
+      <section class="resultPrice shop">
+        <button class="button lg-button"><span>0원</span> 주문하기</button>
+      </section>
+    </main>
+  </body>
+</html>

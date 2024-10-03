@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
   function controlHeadphone(data, event) {
     if (event.deltaY > 0 && data > 50) {
-      headphone.style.bottom = "-58%";
+      headphone.style.bottom = "-62%";
       headphone.style.transform = "translate(-50%, 0) scale(1)";
     } else if (event.deltaY < 0 && data < 800) {
       headphone.style.bottom = "";

@@ -1,4 +1,9 @@
 window.addEventListener("load", function () {
+  let spArr = [];
+  if (this.localStorage.getItem("spArr")) {
+    spArr = JSON.parse(localStorage.getItem("spArr"));
+  }
+  console.log(spArr);
   let popup = this.document.querySelector("#popup");
   let popupclose = this.document.querySelector("#popup > button");
   let popupbutton = this.document.querySelectorAll(".box > button");
@@ -12,9 +17,57 @@ window.addEventListener("load", function () {
   let totalMonyBox = this.document.querySelectorAll(
     "form > div:last-of-type > span"
   )[0];
+  let spButton = this.document.querySelector(".formButton");
   let buyNumber = 1;
   let productPrice = 0;
+  const optionName = {
+    earphone_pink: "WF-1000XM5 스모키 핑크",
+    earphone_platinum_silver: "WF-1000XM5 플래티넘 실버",
+    earphone_black: "WF-1000XM5 블랙",
+    headphone_platinum_silver: "WH-1000XM5 플래티넘 실버",
+    headphone_smokey_pink: "WH-1000XM5 스모키 핑크",
+    headphone_black: "WH-1000XM5 블랙",
+    headphone_midnight_blue: "WH-1000XM5 미드나잇 블루",
+    speaker_blue: "SRS-XB100 블루",
+    speaker_black: "SRS-XB100 블랙",
+    speaker_light_Grey: "SRS-XB100 라이트 그레이",
+    speaker_Orange: "SRS-XB100 오렌지",
+  };
 
+  // 장바구니 담기
+  spButton.addEventListener("click", function () {
+    if (!product.value) {
+      alert("제품이 선택되지 않았습니다.");
+      return;
+    }
+    const productsrc = product.value;
+    const currentBuyNumber = buyNumber;
+    let matchState = "no match";
+    let spObject = {
+      productsrc: productsrc,
+      productName: optionName[productsrc],
+      currentBuyNumber: currentBuyNumber,
+      totalvalue: totalMonyBox.innerHTML,
+    };
+
+    for (let i = 0; i < spArr.length; i++) {
+      if (spObject.productName === spArr[i].productName) {
+        spArr[i].currentBuyNumber += spObject.currentBuyNumber;
+        spArr[i].totalvalue = changeToString(
+          changeToNumber(spArr[i].totalvalue) +
+            changeToNumber(spObject.totalvalue)
+        );
+        matchState = "match";
+        break; // 순회 중단
+      }
+    }
+    if (matchState === "no match") spArr.push(spObject);
+    console.log(spArr);
+    // 배열을 문자열로 변환하여 Local Storage에 저장
+    localStorage.setItem("spArr", JSON.stringify(spArr));
+    alert("물건이 장바구니에 담겼습니다.");
+  });
+  // 플러스 마이너스 버튼
   minButton.addEventListener("click", function () {
     if (countValue.innerHTML <= 1) return;
     countValue.innerHTML = --buyNumber;
@@ -25,6 +78,7 @@ window.addEventListener("load", function () {
     totalMonyBox.innerHTML = changeToString(productPrice * buyNumber);
   });
 
+  // 옵션탭 사진 교체
   product.addEventListener("change", function () {
     imgContainer.children[0].src = `/img/${product.value}.png`;
   });
@@ -46,12 +100,13 @@ window.addEventListener("load", function () {
       let productPopup = this.document.querySelector(".productPopup");
       let formElement = this.document.querySelector(".productPopup > form");
 
-      // 팝업 창 내용 변경하기
+      // 자세히 보기 버튼 연결
       popupbutton.forEach((item, index) => {
         item.addEventListener("click", function () {
-          //팝업 띄우기
+          // 팝업창을 띄운다.
           popup.style.opacity = "0.93";
           popup.style.visibility = "visible";
+          // 처음엔 갯수가 1개다.
           buyNumber = 1;
           countValue.innerHTML = buyNumber;
 
@@ -101,6 +156,7 @@ window.addEventListener("load", function () {
     })
     .catch((error) => console.error("로딩중 에러가 발생하였습니다", error));
 
+  // 398,000원 <=> 398000 서로 교환해주는 함수다.
   function changeToNumber(str) {
     let arr = [...str];
     let result = "";
@@ -111,6 +167,7 @@ window.addEventListener("load", function () {
     }
     return +result;
   }
+
   function changeToString(num) {
     let str = num.toLocaleString();
     return str + "원";
