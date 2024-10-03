@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "src": "/img/earphone_pink.png",
+    "alt": "이어폰 제품 사진",
+    "tag": "# 노이즈 캔슬링 # 360 Reality Audio",
+    "name": "WF-1000XM5",
+    "ment": "Your New Colour, Smoky Pink",
+    "price": "359,000원",
+    "pnumber": "359000",
+    "product": [
+      {
+        "value": "earphone_pink",
+        "label": "WF-1000XM5 스모키 핑크"
+      },
+      {
+        "value": "earphone_platinum_silver",
+        "label": "WF-1000XM5 플래티넘 실버"
+      },
+      {
+        "value": "earphone_black",
+        "label": "WF-1000XM5 블랙"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "src": "/img/headphone_platinum_silver.png",
+    "alt": "헤드폰 제품 사진",
+    "tag": "# 노이즈 캔슬링 # 편안한 착용감",
+    "name": "WH-1000XM5",
+    "ment": "#몰입의 즐거움 #스터디헤드폰",
+    "price": "519,000원",
+    "pnumber": "519000",
+    "product": [
+      {
+        "value": "headphone_platinum_silver",
+        "label": "WH-1000XM5 플래티넘 실버"
+      },
+      {
+        "value": "headphone_smokey_pink",
+        "label": "WH-1000XM5 스모키 핑크"
+      },
+      {
+        "value": "headphone_black",
+        "label": "WH-1000XM5 블랙"
+      },
+      {
+        "value": "headphone_midnight_blue",
+        "label": "WH-1000XM5 미드나잇 블루"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "src": "/img/speaker_blue.png",
+    "alt": "스피커 제품 사진",
+    "tag": "# 스테레오 페어 # 강력한 스피커",
+    "name": "SRS-XB100",
+    "ment": "깊고 강력한 사운드, 사이즈만 미니",
+    "price": "89,000원",
+    "pnumber": "89000",
+    "product": [
+      {
+        "value": "speaker_blue",
+        "label": "SRS-XB100 블루"
+      },
+      {
+        "value": "speaker_black",
+        "label": "SRS-XB100 블랙"
+      },
+      {
+        "value": "speaker_light_Grey",
+        "label": "SRS-XB100 라이트 그레이"
+      },
+      {
+        "value": "speaker_Orange",
+        "label": "SRS-XB100 오렌지"
+      }
+    ]
+  }
+]
