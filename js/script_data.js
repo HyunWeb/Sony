@@ -20,6 +20,8 @@ window.addEventListener("load", function () {
   let spButton = this.document.querySelector(".formButton");
   let buyNumber = 1;
   let productPrice = 0;
+  let currentPrice;
+  let currentID;
   const optionName = {
     earphone_pink: "WF-1000XM5 스모키 핑크",
     earphone_platinum_silver: "WF-1000XM5 플래티넘 실버",
@@ -44,10 +46,12 @@ window.addEventListener("load", function () {
     const currentBuyNumber = buyNumber;
     let matchState = "no match";
     let spObject = {
+      id: currentID,
       productsrc: productsrc,
       productName: optionName[productsrc],
       currentBuyNumber: currentBuyNumber,
       totalvalue: totalMonyBox.innerHTML,
+      price: currentPrice,
     };
 
     for (let i = 0; i < spArr.length; i++) {
@@ -120,6 +124,7 @@ window.addEventListener("load", function () {
           while (product.children[1]) {
             product.removeChild(product.children[1]);
           }
+
           // 아이디와 일치하는 데이터만 올린다.
           data.forEach((data) => {
             if (index + 1 === data.id) {
@@ -135,7 +140,8 @@ window.addEventListener("load", function () {
               h3Element.innerHTML = data.name;
               pElement.innerHTML = data.ment;
               strongElement.innerHTML = data.price;
-
+              currentPrice = +data.pnumber;
+              currentID = data.id;
               imgContainer.appendChild(imgElement);
               productPopup.insertBefore(bElement, formElement);
               productPopup.insertBefore(h3Element, formElement);

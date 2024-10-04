@@ -32,14 +32,30 @@ window.addEventListener("load", function () {
       let brElement = this.document.createElement("br");
       let buttonElement = this.document.createElement("button");
       let closespanElement = this.document.createElement("span");
+      let countdivElement = this.document.createElement("div");
+      let minusbuttonElement = this.document.createElement("button");
+      let plusbuttonElement = this.document.createElement("button");
+      let checkbox = this.document.createElement("input");
+
+      minusbuttonElement.innerHTML = "-";
+      minusbuttonElement.classList.add("countButton", "minusBT");
+      plusbuttonElement.innerHTML = "+";
+      plusbuttonElement.classList.add("countButton", "plusBT");
 
       imgElement.src = `./img/${data.productsrc}.png`;
       imgElement.alt = `${data.productName}`;
       bElement.innerHTML = data.totalvalue;
-      spanElement.innerHTML = `${data.currentBuyNumber}개`;
+      spanElement.innerHTML = data.currentBuyNumber;
+      spanElement.classList.add("spanElement");
       divElement.innerHTML = `${data.productName}<br>`;
+      countdivElement.style.display = "flex";
+      countdivElement.style.marginTop = "10px";
       closespanElement.innerHTML = "닫기버튼";
       buttonElement.innerHTML = "X";
+      liElement.classList.add(`${index}`);
+      checkbox.type = "checkbox";
+      checkbox.classList.add("checkbox");
+      checkbox.value = `${index}`;
 
       // 총 아이템 개수 합산
       countOFItem += +data.currentBuyNumber;
@@ -53,10 +69,14 @@ window.addEventListener("load", function () {
       totalPriceBox.innerHTML = changeToString(totalPrice);
       totalPriceButton.innerHTML = changeToString(totalPrice);
 
+      liElement.appendChild(checkbox);
       liElement.appendChild(imgElement);
       divElement.appendChild(bElement);
       divElement.appendChild(brElement);
-      divElement.appendChild(spanElement);
+      countdivElement.appendChild(minusbuttonElement);
+      countdivElement.appendChild(spanElement);
+      countdivElement.appendChild(plusbuttonElement);
+      divElement.appendChild(countdivElement);
       buttonElement.appendChild(closespanElement);
       liElement.appendChild(buttonElement);
       liElement.appendChild(divElement);
@@ -65,19 +85,38 @@ window.addEventListener("load", function () {
   } else {
     console.log("로컬스토리지가 비어있습니다.");
   }
+
+  let minusButtons = this.document.querySelectorAll(".minusBT");
+  let plusButtons = this.document.querySelectorAll(".plusBT");
+  for (let i = 0; i < plusButtons.length; i++) {
+    // 개수 감소 버튼
+    minusButtons[i].addEventListener("click", function (event) {
+      let currentCount =
+        event.target.parentElement.querySelector("span").innerHTML;
+      if (currentCount <= 1) return;
+
+      currentCount = --event.target.parentElement.querySelector("span")
+        .innerHTML;
+      recountValue(event, currentCount);
+      insertInnerHTML();
+    });
+    // 개수 추가 버튼
+    plusButtons[i].addEventListener("click", function (event) {
+      let currentCount = ++event.target.parentElement.querySelector("span")
+        .innerHTML;
+      recountValue(event, currentCount);
+      insertInnerHTML();
+    });
+  }
+
   // 전체 삭제
   deleteButton.addEventListener("click", function () {
     localStorage.removeItem("spArr");
     while (itemList.firstChild) {
       itemList.removeChild(itemList.firstChild);
     }
-    countOFItem = 0;
-    countOFItemElement.innerHTML = countOFItem;
-    currentPrice = 0;
-    totalPrice = 0;
-    currentPriceBox.innerHTML = changeToString(currentPrice);
-    totalPriceBox.innerHTML = changeToString(totalPrice);
-    totalPriceButton.innerHTML = changeToString(totalPrice);
+    spArr = [];
+    insertInnerHTML(0);
   });
 
   // 개별 삭제
@@ -85,32 +124,18 @@ window.addEventListener("load", function () {
   // 로딩되면 모든 리스트의 버튼들에 핸들러를 추가.
   for (let i = 0; i < closeButtons.length; i++) {
     closeButtons[i].addEventListener("click", function (event) {
+      console.log(spArr);
       // 클릭된 버튼이 속한 제품 이름을 탐색
-      let deleteName = event.target.parentElement.firstChild.alt;
-      let price = event.target.parentElement.querySelector("div > b").innerHTML;
-      let count =
-        event.target.parentElement.querySelector("div > span").innerHTML;
+      let deleteName = event.target.parentElement.querySelector("img").alt;
       // 제품이 속한 부모노드 li를 삭제
       event.target.parentElement.remove();
       // 로컬스토리지 정리 >> 지울 이름을 제외한 나머지만 다시 배열로 담는다.
       spArr = spArr.filter((item) => !(item.productName === deleteName));
+      console.log(spArr, deleteName);
       // 다시 로컬스토리지로 수정된 배열을 저장
       localStorage.setItem("spArr", JSON.stringify(spArr));
 
-      // 배달비 포함한 금액
-      let newTotalPrice = changeToString(
-        changeToNumber(totalPriceBox.innerHTML) - changeToNumber(price)
-      );
-      // 배달비 제외 금액
-      let newcurrentPrice = changeToString(
-        changeToNumber(newTotalPrice) - deliveryPrice
-      );
-      currentPriceBox.innerHTML = newcurrentPrice;
-      totalPriceBox.innerHTML = spArr.length ? newTotalPrice : 0 + "원";
-      totalPriceButton.innerHTML = spArr.length ? newTotalPrice : 0 + "원";
-
-      countOFItemElement.innerHTML =
-        +countOFItemElement.innerHTML - splitnumstr(count);
+      insertInnerHTML();
     });
   }
 
@@ -121,6 +146,51 @@ window.addEventListener("load", function () {
       alert("장바구니가 비어있습니다.");
     }
   });
+  let selectDel = this.document.querySelector(".selectDel");
+
+  selectDel.addEventListener("click", function () {
+    let checkboxes = document.querySelectorAll(".checkbox");
+    let delindex = [];
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        checkboxes[i].parentElement.remove();
+        delindex.push(i);
+      }
+    }
+    spArr = spArr.filter((item, index) => !delindex.includes(index));
+    for (let i = 0; i < itemList.children.length; i++) {
+      let value = itemList.children[i].classList[0];
+      itemList.children[i].classList.replace(value, i);
+    }
+    localStorage.setItem("spArr", JSON.stringify(spArr));
+
+    insertInnerHTML();
+  });
+
+  function insertInnerHTML(data) {
+    let result = calculateTotalPrice(data);
+    currentPriceBox.innerHTML = result[0];
+    totalPriceBox.innerHTML = result[1];
+    totalPriceButton.innerHTML = result[1];
+    countOFItemElement.innerHTML = result[2];
+  }
+
+  function calculateTotalPrice(data) {
+    // 배열을 돌면서 전체 값만 새로 계산
+    let result = 0;
+    let deliveryPrice = 2500;
+    let countOFItem = 0;
+    for (let i = 0; i < spArr.length; i++) {
+      countOFItem += spArr[i].currentBuyNumber;
+      if (!(data === 0)) {
+        data = changeToNumber(spArr[i].totalvalue);
+      }
+      let num = data;
+      result += num;
+    }
+    let deliveryprice = result === 0 ? 0 : result + deliveryPrice;
+    return [changeToString(result), changeToString(deliveryprice), countOFItem];
+  }
 
   function changeToNumber(str) {
     let arr = [...str];
@@ -131,6 +201,15 @@ window.addEventListener("load", function () {
       }
     }
     return +result;
+  }
+  function recountValue(event, currentCount) {
+    let index =
+      event.target.parentElement.parentElement.parentElement.classList.value;
+    let prices = event.target.parentElement.parentElement.querySelector("b");
+    prices.innerHTML = changeToString(spArr[index].price * currentCount);
+    spArr[index].totalvalue = prices.innerHTML;
+    spArr[index].currentBuyNumber = currentCount;
+    localStorage.setItem("spArr", JSON.stringify(spArr));
   }
 
   function changeToString(num) {
