@@ -1,0 +1,159 @@
+body {
+  background-color: #e2e2e2;
+}
+.shop {
+  background-color: #ececec;
+}
+.shopHeader {
+  border-radius: 0 0 22px 22px;
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+.shopHeader > h1 {
+  padding-top: 65px;
+  text-align: center;
+  font-size: 27px;
+  line-height: 50px;
+  position: relative;
+  font-weight: 700;
+}
+.shopHeader > h1::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: #d3d3d3;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.shopHeader > div {
+  display: flex;
+  justify-content: space-around;
+}
+.shopHeader > div > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+}
+.shopHeader > div > p {
+  line-height: 50px;
+  font-size: 15px;
+}
+.shopHeader > div > p > span {
+  font-weight: 700;
+}
+.shopList {
+  height: 60vh;
+  margin-top: 1%;
+  padding: 30px;
+  border-radius: 22px;
+  overflow: auto;
+}
+.shopList > h2 {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+.shopList > ul {
+  overflow: auto;
+  min-height: 500px;
+}
+
+.itemList > li {
+  padding: 0 10%;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.itemList > li > img {
+  width: 190px;
+}
+.itemList > li > div {
+  font-size: 15px;
+  line-height: 23px;
+}
+.itemList > li > div > b {
+  font-weight: 700;
+}
+.itemList > li > div > span {
+  font-size: 14px;
+  color: #939393;
+}
+.itemList > li > button {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+.itemList > li > button:hover {
+  color: #1e3990;
+}
+.itemList > li > button > span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.calculatePrice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  line-height: 20px;
+  position: relative;
+}
+.calculatePrice ::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 2px;
+  background-color: #d3d3d3;
+}
+.calculatePrice > strong > span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.resultPrice {
+  display: flex;
+  justify-content: center;
+  padding: 3% 0 2%;
+  position: relative;
+  border-radius: 22px;
+  margin-top: 1%;
+}
+.resultPrice::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 2px;
+  background-color: #d3d3d3;
+}
+.resultPrice > button {
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #374c91;
+  color: #f3f3f3;
+}

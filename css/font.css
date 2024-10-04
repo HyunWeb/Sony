@@ -32,3 +32,30 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  color: #3b3b3b;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
+  background-color: #dadada;
+}
+/* 버튼 스타일 */
+.button {
+  background-color: #f3f3f3;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  font-family: GmarketSans, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #3b3b3b;
+  padding: 8px 30px;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.lg-button {
+  padding: 15px 30px;
+  border-radius: 18px;
+}
+.button:hover {
+  background-color: #1e3990;
+  color: white;
+}

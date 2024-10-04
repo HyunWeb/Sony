@@ -1,28 +1,5 @@
-.button {
-  background-color: #f3f3f3;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  font-family: GmarketSans, "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-size: 17px;
-  color: #3b3b3b;
-  padding: 8px 30px;
-  cursor: pointer;
-  transition-duration: 200ms;
-}
-.lg-button {
-  padding: 15px 30px;
-  border-radius: 18px;
-}
-.button:hover {
-  background-color: #1e3990;
-  color: white;
-}
-html {
-  color: #3b3b3b;
-  background-color: #dadada;
-  font-family: GmarketSans, "Times New Roman", Times, serif;
+header {
+  height: 58px;
 }
 main {
   overflow: hidden;
@@ -304,28 +281,6 @@ h2 {
 #speechBox + span > b {
   font-weight: 500;
 }
-footer {
-  padding: 2% 1%;
-  height: 100px;
-  background-color: #3f3f3f;
-  border-top: 2px solid #dadada;
-  color: #dadada;
-  font-size: 12px;
-}
-footer > div {
-  margin-bottom: 15px;
-}
-footer > div > a {
-  text-decoration: none;
-  color: inherit;
-}
-footer > span {
-  display: block;
-  margin-bottom: 10px;
-}
-footer > p {
-  line-height: 20px;
-}
 #mainPage > img:nth-child(1) {
   animation: move 5s infinite;
 }
@@ -359,4 +314,131 @@ footer > p {
   to {
     transform: translateY(0); /* 시작 위치 */
   }
+}
+
+#popup {
+  width: 80%;
+  height: 72%;
+  position: absolute;
+  z-index: 1;
+  top: 148vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #f0f0f0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition-duration: 300ms;
+}
+#popup > button {
+  font-size: 30px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+#popup > button:hover {
+  transform: rotate(180deg);
+}
+#popup > button > span {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+#popup > div:first-of-type > img {
+  width: 550px;
+  display: block;
+}
+.productPopup {
+  text-align: left;
+  position: relative;
+  margin-right: 30px;
+  transition-duration: 500ms;
+}
+.productPopup > b {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.productPopup > h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+.productPopup > p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.productPopup > strong {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.productPopup > form {
+  margin-top: 20px;
+}
+.productPopup > form > label {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.productPopup > form > * {
+  display: block;
+}
+.productPopup > form > select {
+  width: 100%;
+  padding: 7px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.productPopup > form > button {
+  background-color: #3f3f3f;
+  color: #f3f3f3;
+}
+.productPopup > form > button:hover {
+  background-color: #1e3990;
+  color: #f3f3f3;
+}
+.productPopup > form > div:last-of-type {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 300;
+  border-top: 2px solid #3f3f3f;
+  padding: 15px 0;
+}
+.productPopup > form > div:last-of-type > span {
+  font-size: 25px;
+  font-weight: 700;
+
+  position: relative;
+  right: -10px;
+}
+.productPopup > form > label:last-of-type {
+  margin-top: 10px;
+}
+#countButtonBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+#countButtonBox > button {
+  width: 50px;
+  height: 30px;
+}
+#countButtonBox > span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
 }
