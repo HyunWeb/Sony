@@ -1,9 +1,9 @@
+import { cumtomAlert } from "./alert.js";
 window.addEventListener("load", function () {
   let spArr = [];
   if (this.localStorage.getItem("spArr")) {
     spArr = JSON.parse(localStorage.getItem("spArr"));
   }
-  console.log(spArr);
   let popup = this.document.querySelector("#popup");
   let popupclose = this.document.querySelector("#popup > button");
   let popupbutton = this.document.querySelectorAll(".box > button");
@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
   // 장바구니 담기
   spButton.addEventListener("click", function () {
     if (!product.value) {
-      alert("제품이 선택되지 않았습니다.");
+      cumtomAlert("제품이 선택되지 않았습니다.", "warning");
       return;
     }
     const productsrc = product.value;
@@ -69,7 +69,7 @@ window.addEventListener("load", function () {
     console.log(spArr);
     // 배열을 문자열로 변환하여 Local Storage에 저장
     localStorage.setItem("spArr", JSON.stringify(spArr));
-    alert("물건이 장바구니에 담겼습니다.");
+    cumtomAlert("물건이 장바구니에 담겼습니다.", "success");
   });
   // 플러스 마이너스 버튼
   minButton.addEventListener("click", function () {

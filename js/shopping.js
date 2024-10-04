@@ -1,3 +1,4 @@
+import { cumtomAlert } from "./alert.js";
 // Local Storage에서 배열 가져오기
 window.addEventListener("load", function () {
   let spArr = JSON.parse(localStorage.getItem("spArr"));
@@ -141,9 +142,9 @@ window.addEventListener("load", function () {
 
   resultPrice.addEventListener("click", function () {
     if (!(totalPriceButton.innerHTML === "0원")) {
-      alert("주문이 완료되었습니다.");
+      cumtomAlert("주문이 완료되었습니다.", "success");
     } else {
-      alert("장바구니가 비어있습니다.");
+      cumtomAlert("장바구니가 비어있습니다.", "warning");
     }
   });
   let selectDel = this.document.querySelector(".selectDel");
