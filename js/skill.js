@@ -17,6 +17,5 @@ window.addEventListener("load", function () {
       }
     });
   }
-
   window.addEventListener("scroll", handleScroll);
 });
