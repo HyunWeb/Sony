@@ -189,4 +189,5 @@ window.addEventListener("load", function () {
     }
   }
   // 브라우저 크기가 변경될 때마다 실행
+  console.log(window.innerWidth);
 });
