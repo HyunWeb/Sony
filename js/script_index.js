@@ -25,17 +25,30 @@ window.addEventListener("load", function () {
       MBcontrolOtherProduct(bestSellerData);
       MBcontrolskillSection(skillTitleData, skillimageData);
       MBcontrolcompanySection(companyTitleData, companyTextBox);
+    } else if (this.window.innerWidth >= 768 && this.window.innerWidth < 1024) {
+      TBcontrolHeadphone(data, event);
+      TBcontrolOtherProduct(bestSellerData);
+      TBcontrolskillSection(skillTitleData, skillimageData);
+      TBcontrolcompanySection(companyTitleData, companyTextBox);
     } else {
       controlHeadphone(data, event);
-
       controlOtherProduct(earphoneData, bestSellerData);
-
       controlskillSection(skillTitleData);
-
       controlcompanySection(companyTitleData, companyTextBox);
     }
   });
 
+  function TBcontrolHeadphone(data, event) {
+    if (event.deltaY > 0 && data > 50) {
+      headphone.style.bottom = "-87%";
+      headphone.style.transform = "translate(-50%, 0) scale(1)";
+      earphone.style.transform = "";
+      speaker.style.transform = "";
+    } else if (event.deltaY < 0 && data < 800) {
+      headphone.style.bottom = "";
+      headphone.style.transform = "";
+    }
+  }
   function MBcontrolHeadphone(data, event) {
     if (event.deltaY > 0 && data > 50) {
       headphone.style.bottom = "-82%";
@@ -54,6 +67,17 @@ window.addEventListener("load", function () {
     } else if (event.deltaY < 0 && data < 800) {
       headphone.style.bottom = "";
       headphone.style.transform = "";
+    }
+  }
+
+  function TBcontrolOtherProduct(bestSellerData) {
+    if (
+      bestSellerData.top <= this.window.innerHeight &&
+      bestSellerData.bottom > 0
+    ) {
+      bestSellerTitle.style.top = "0";
+    } else {
+      bestSellerTitle.style.top = "";
     }
   }
   function MBcontrolOtherProduct(bestSellerData) {
@@ -87,6 +111,39 @@ window.addEventListener("load", function () {
     }
   }
 
+  function TBcontrolskillSection(skillTitleData, skillimageData) {
+    if (
+      skillTitleData.top <= this.window.innerHeight &&
+      skillTitleData.bottom > 0
+    ) {
+      skillTitle.style.top = "5px";
+      skillimage.style.transform = "translate(0, 0)";
+    } else {
+      skillTitle.style.top = "";
+      skillimage.style.transform = "";
+    }
+
+    if (
+      skillimageData.top <= this.window.innerHeight &&
+      skillimageData.bottom > 0
+    ) {
+      skillimage.style.transform = "translate(0, 0)";
+    } else {
+      skillimage.style.transform = "";
+    }
+
+    for (let i = 0; i < skillTextBox.length; i++) {
+      let skillTextBoxData = skillTextBox[i].getBoundingClientRect();
+      if (
+        skillTextBoxData.top <= this.window.innerHeight &&
+        skillTextBoxData.bottom > 0
+      ) {
+        skillTextBox[i].style.top = "0";
+      } else {
+        skillTextBox[i].style.top = "";
+      }
+    }
+  }
   function MBcontrolskillSection(skillTitleData, skillimageData) {
     if (
       skillTitleData.top <= this.window.innerHeight &&
@@ -144,6 +201,28 @@ window.addEventListener("load", function () {
       }
     }
   }
+  function TBcontrolcompanySection(companyTitleData, companyTextBox) {
+    if (
+      companyTitleData.top <= this.window.innerHeight &&
+      companyTitleData.bottom > 0
+    ) {
+      companyTitle.style.top = "5px";
+    } else {
+      companyTitle.style.top = "";
+    }
+
+    for (let i = 0; i < companyTextBox.length; i++) {
+      let companyTextBoxData = companyTextBox[i].getBoundingClientRect();
+      if (
+        companyTextBoxData.top <= this.window.innerHeight &&
+        companyTextBoxData.bottom > 0
+      ) {
+        companyTextBox[i].style.top = "0";
+      } else {
+        companyTextBox[i].style.top = "";
+      }
+    }
+  }
   function MBcontrolcompanySection(companyTitleData, companyTextBox) {
     if (
       companyTitleData.top <= this.window.innerHeight &&
@@ -188,6 +267,4 @@ window.addEventListener("load", function () {
       }
     }
   }
-  // 브라우저 크기가 변경될 때마다 실행
-  console.log(window.innerWidth);
 });

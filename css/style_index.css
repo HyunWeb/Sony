@@ -8,6 +8,9 @@ h2 {
   font-weight: 700;
   font-size: 30px;
 }
+body {
+  min-width: 1220px;
+}
 #mainPage {
   height: 100vh;
   background-image: url(../img/header_logo.png);
@@ -193,7 +196,8 @@ h2 {
 #skillSection > div {
   padding-top: 3%;
   margin-left: 7%;
-  width: 23%;
+  /* width: 23%; */
+  width: 438px;
 }
 #skillSection > div > h2 {
   margin-bottom: 5%;
@@ -442,12 +446,10 @@ h2 {
   font-size: 20px;
   line-height: 30px;
 }
-/* @media (min-width: 768px) and (max-width: 1023px) {
-  html {
-    background-color: #1e3990;
-  }
-} */
 @media (max-width: 767px) {
+  body {
+    min-width: auto;
+  }
   #mainPage {
     background-size: 90%;
     background-position: 50% 40%;
@@ -640,8 +642,11 @@ h2 {
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    min-width: auto;
+  }
   #mainPage {
-    background-size: 90%;
+    background-size: 80%;
     background-position: 50% 40%;
   }
   #mainPage > img:first-child {
@@ -706,8 +711,10 @@ h2 {
     font-size: 15px;
   }
   #skillSection::before {
-    top: -10%;
-    font-size: 50px;
+    top: -35%;
+    left: -71%;
+    font-size: 100px;
+    transform: rotate(-90deg);
     letter-spacing: 5px;
   }
 
@@ -787,13 +794,14 @@ h2 {
   }
 
   #skillSection > div > h2 {
-    margin-bottom: 8%;
+    margin-bottom: 4%;
     text-align: center;
   }
   #textBox {
     font-size: 17px;
     line-height: 20px;
     padding-left: 5%;
+    margin-bottom: 1%;
   }
   #textBox + a {
     margin-bottom: 30px;
