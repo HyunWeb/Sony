@@ -61,3 +61,30 @@ footer > span {
 footer > p {
   line-height: 20px;
 }
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    font-size: 15px;
+    padding: 0;
+    transition-duration: 500ms;
+    margin-top: -100%;
+  }
+  nav > a {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    transform: translateY(0);
+    padding: 20px 0 10px 20px;
+  }
+  nav > ul {
+    flex-direction: column;
+    padding-top: 12%;
+    text-align: center;
+  }
+  footer {
+    font-size: 10px;
+  }
+  footer > p {
+    line-height: 15px;
+  }
+}

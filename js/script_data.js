@@ -108,7 +108,7 @@ window.addEventListener("load", function () {
       popupbutton.forEach((item, index) => {
         item.addEventListener("click", function () {
           // 팝업창을 띄운다.
-          popup.style.opacity = "0.93";
+          popup.style.opacity = "1";
           popup.style.visibility = "visible";
           // 처음엔 갯수가 1개다.
           buyNumber = 1;
