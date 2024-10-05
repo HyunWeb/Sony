@@ -8,9 +8,9 @@ h2 {
   font-weight: 700;
   font-size: 30px;
 }
-body {
+/* body {
   min-width: 1220px;
-}
+} */
 #mainPage {
   height: 100vh;
   background-image: url(../img/header_logo.png);
@@ -837,5 +837,15 @@ body {
   #companySection > div > a {
     align-self: center;
     margin-bottom: 30px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1220px) {
+  #skillSection::before {
+    font-size: 75px;
+    top: -40%;
+  }
+  #companySection {
+    background-size: 600px;
+    background-position: 90% bottom;
   }
 }

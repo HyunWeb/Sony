@@ -267,4 +267,9 @@ window.addEventListener("load", function () {
       }
     }
   }
+
+  window.addEventListener("resize", function (event) {
+    headphone.style.bottom = "";
+    headphone.style.transform = "";
+  });
 });
