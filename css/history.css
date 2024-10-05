@@ -160,12 +160,12 @@ body {
   }
 
   .main > div {
-    margin: 50px;
+    margin: 20px;
     border-radius: 50%;
     background-color: #f3f3f3;
-    border: 1px solid black;
-    width: 350px;
-    height: 350px;
+
+    width: 280px;
+    height: 280px;
   }
 
   .id {
