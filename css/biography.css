@@ -29,7 +29,7 @@ th img {
 }
 
 th div {
-  background: white;
+  background: transparent;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
 
 .v-line {
   border-left: thick solid #32a1ce;
-  height: 10500px;
+  height: 10000px;
   position: absolute;
   left: 50%;
 }
