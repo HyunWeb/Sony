@@ -23,7 +23,7 @@ body {
   height: 40px;
   background-color: #dadada;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -48,6 +48,7 @@ body {
 
 /* 2 */
 .btn-2 {
+  margin: 200px;
   background: #1e3990;
   border: none;
   color: white;
