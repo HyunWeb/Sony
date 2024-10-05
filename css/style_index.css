@@ -453,10 +453,11 @@ h2 {
     background-position: 50% 40%;
   }
   #mainPage > img:first-child {
-    width: 25%;
+    width: 120px;
+    top: 18%;
   }
   #mainPage > img:nth-child(2) {
-    width: 25%;
+    width: 120px;
     bottom: 27%;
     right: 9%;
   }
@@ -465,12 +466,12 @@ h2 {
   }
   #mainPage::after {
     font-size: 15px;
-    transform: translate(-245%, 220%);
+    transform: translate(-233%, 80%);
     line-height: 21px;
   }
 
   #mainPage::before {
-    transform: translate(228%, -400%);
+    transform: translate(228%, -1200%);
     font-size: 15px;
   }
 
@@ -644,10 +645,11 @@ h2 {
     background-position: 50% 40%;
   }
   #mainPage > img:first-child {
-    width: 25%;
+    width: 120px;
+    top: 18%;
   }
   #mainPage > img:nth-child(2) {
-    width: 25%;
+    width: 120px;
     bottom: 27%;
     right: 9%;
   }
@@ -656,12 +658,12 @@ h2 {
   }
   #mainPage::after {
     font-size: 15px;
-    transform: translate(-245%, 220%);
+    transform: translate(-233%, 80%);
     line-height: 21px;
   }
 
   #mainPage::before {
-    transform: translate(228%, -400%);
+    transform: translate(228%, -1200%);
     font-size: 15px;
   }
 
