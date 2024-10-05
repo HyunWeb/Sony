@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>sony-history 페이지</title>
+  </head>
+  <link rel="stylesheet" href="./css/history.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    .swiper {
+      width: 1471px;
+      height: 179px;
+      padding: 0px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      padding: 0%;
+      margin: 0%;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin-left: 20px;
+      border-radius: 20%;
+      border: 2px solid black;
+    }
+    @media screen and (max-width: 768px) {
+      .main > div {
+        background-color: blanchedalmond;
+        border: 1px solid black;
+        width: 700px;
+        height: 400px;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+
+      .id {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 90%;
+          height: 90%;
+          object-fit: contain;
+        }
+      }
+    }
+    #container {
+      width: 100vw;
+      height: 150px;
+    }
+  </style>
+  <body>
+    <!-- -header, footer는 고정 -->
+    <div id="container">
+      <div id="box">
+        <button
+          class="custom-btn btn-2 noholder"
+          onclick="location.href = 'biography.html'"
+        >
+          일대기
+        </button>
+        <button class="custom-btn btn-2">제품의 역사</button>
+      </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="box1">
+          <img src="./img/1970/type1.png" alt="" />
+          <img src="./img/1970/type2.png" alt="" />
+          <img src="./img/1970/type3.png" alt="" />
+          <img src="./img/1970/type4.png" alt="" />
+          <img src="./img/1970/type5.png" alt="" />
+        </div>
+        <div class="swiper-slide" id="box2">
+          <img src="./img/1980/type1.png" alt="" />
+          <img src="./img/1980/type2.png" alt="" />
+          <img src="./img/1980/type3.png" alt="" />
+          <img src="./img/1980/type4.png" alt="" />
+          <img src="./img/1980/type5.png" alt="" />
+        </div>
+        <div class="swiper-slide" id="box3">
+          <img src="./img/1990/type1.png" alt="" />
+          <img src="./img/1990/type2.png" alt="" />
+          <img src="./img/1990/type3.png" alt="" />
+          <img src="./img/1990/type4.png" alt="" />
+          <img src="./img/1990/type5.png" alt="" />
+        </div>
+        <div class="swiper-slide" id="box4">
+          <img src="./img/2000/type1.png" alt="" />
+          <img src="./img/2000/type2.png" alt="" />
+          <img src="./img/2000/type3.png" alt="" />
+          <img src="./img/2000/type4.png" alt="" />
+          <img src="./img/2000/type5.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="line">
+      <div class="container-button">
+        <button class="button clicked radius1" value="1970">1970</button>
+        <button class="button" value="1980">1980</button>
+        <button class="button" value="1990">1990</button>
+        <button class="button radius2" value="2010">2000</button>
+      </div>
+    </div>
+    <br />
+    <br />
+    <!-- 1970년도 사진 -->
+    <div id="check1">
+      <div class="main">
+        <div id="id1" class="id">
+          <img src="./img/1970/type1.png" alt="" id="img1" />
+        </div>
+        <div id="id2" class="id">
+          <img src="./img/1970/type2.png" alt="" id="img2" />
+        </div>
+      </div>
+      <div class="main">
+        <div id="id3" class="id">
+          <img src="./img/1970/type3.png" alt="" id="img3" />
+        </div>
+        <div id="id4" class="id">
+          <img src="./img/1970/type4.png" alt="" id="img4" />
+        </div>
+        <div id="id5" class="id">
+          <img src="./img/1970/type5.png" alt="" id="img5" />
+        </div>
+      </div>
+    </div>
+    <!-- Modal HTML embedded directly into document -->
+    <div id="model" class="model">
+      <img
+        src="./image/1970/type1.png"
+        alt="test페이지입니다."
+        id="description1"
+      />
+      <p id="description2">test페이지입니다</p>
+      <button id="btn-3">종료</button>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/history.js"></script>
+  </body>
+</html>

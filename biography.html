@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>sony-history 페이지</title>
+    <script src="./divide.js"></script>
+  </head>
+  <link rel="stylesheet" href="./css/history.css" />
+  <link rel="stylesheet" href="./css/biography.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    @media screen and (min-width: 768px) {
+      .swiper {
+        width: 1471px;
+        height: 179px;
+        padding: 0px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 0%;
+        margin: 0%;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        margin-left: 20px;
+        border-radius: 20%;
+        border: 2px solid black;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .swiper {
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <!-- -header, footer는 고정 -->
+    <div id="container">
+      <div id="box">
+        <button class="custom-btn btn-2">일대기</button>
+        <button
+          class="custom-btn btn-2 noholder"
+          onclick="location.href = 'history.html'"
+        >
+          제품의 역사
+        </button>
+      </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="box1">
+          <img src="./img/page/type1.jpg" alt="" />
+          <img src="./img/page/type2.jpg" alt="" />
+          <img src="./img/page/type3.jpg" alt="" />
+          <img src="./img/page/type4.jpg" alt="" />
+          <img src="./img/page/type5.jpg" alt="" />
+        </div>
+        <div class="swiper-slide" id="box2">
+          <img src="./img/page/type6.jpg" alt="" />
+          <img src="./img/page/type7.jpg" alt="" />
+          <img src="./img/page/type8.jpg" alt="" />
+          <img src="./img/page/type9.jpg" alt="" />
+          <img src="./img/page/type10.jpg" alt="" />
+        </div>
+        <div class="swiper-slide" id="box3">
+          <img src="./img/page/type11.jpg" alt="" />
+          <img src="./img/page/type12.jpg" alt="" />
+          <img src="./img/page/type13.jpg" alt="" />
+          <img src="./img/page/type14.jpg" alt="" />
+          <img src="./img/page/type15.jpg" alt="" />
+        </div>
+        <div class="swiper-slide" id="box4">
+          <img src="./img/page/type16.jpg" alt="" />
+          <img src="./img/page/type17.jpg" alt="" />
+          <img src="./img/page/type18.jpg" alt="" />
+          <img src="./img/page/type19.jpg" alt="" />
+          <img src="./img/page/type20.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <table>
+      <div class="v-line">
+        <div class="equilateral-triangle" id="oning"></div>
+      </div>
+
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1946</h1>
+            <img src="./img/page/동경주식회사.webp" alt="" />
+            <p>
+              동경통신공업주식회사(現 소니의 전신)은 19만엔의 자본금으로 통신
+              계측 연구에 필요한 장비를 갖추어 도쿄의 니혼바시에 설립
+            </p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1950</h1>
+            <img src="./img/page/type2.jpg" alt="" />
+            <p>일본 최초의 테이프 레코더 'G 형'의 제작 시작</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1950</h1>
+            <img src="./img/page/type3.jpg" alt="" />
+            <p>일본 최초의 트랜지스터 라디오 'TR-55' 출시</p>
+            <img src="./img/page/type4.jpg" alt="" />
+            <p>회사 제품에 SONY 로고사용 결정</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1958</h1>
+            <img src="./img/page/type4.jpg" alt="다른 이미지 찾기" />
+            <p>소니 주식 회사로 사명 변경</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1960</h1>
+            <img src="./img/page/type5.jpg" alt="다른 이미지 찾기" />
+            <p>세계 최초 직시형 포터블 트랜지스터 텔레비전 'TV8-301' 출시</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1960</h1>
+            <img src="./img/page/type6.jpg" alt="다른 이미지 찾기" />
+            <p>세계 최소·최경량 올 트랜지스터 텔레비전 'TV5-303' 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1960</h1>
+            <img src="./img/page/type7.jpg" alt="다른 이미지 찾기" />
+            <p>세계 최초 트랜지스터 소형 VTR 'PV-100' 출시</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1965</h1>
+            <img src="./img/page/type9.jpg" alt="다른 이미지 찾기" />
+            <p>세계 최초 가정용 VTR 'CV-2000' 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1968</h1>
+            <img src="./img/page/type11.jpg" alt="다른 이미지 찾기" />
+            <p>트리니트론 컬러 TV 'KV-1310' 출시</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1970</h1>
+            <img src="./img/page/type12.jpg" alt="다른 이미지 찾기" />
+            <p>소니 뉴욕 증권 거래소에 상장</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1973</h1>
+            <img src="./img/page/type13.jpg" alt="다른 이미지 찾기" />
+            <p>
+              트리니트론 컬러 TV 시스템의 개발한 공로로 일본 기업 최초로 에미상
+              수상
+            </p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1979</h1>
+            <img src="./img/1970/type1.png" alt="다른 이미지 찾기" />
+            <p>당시에는 혁신이었던 물건, 워크맨 등장</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1979</h1>
+            <img src="./img/page/BD.jpeg" alt="다른 이미지 찾기" />
+            <p>3.5인치 플로피 디스크 개발</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1979</h1>
+            <img src="./img/page/type14.jpg" alt="다른 이미지 찾기" />
+            <p>세계 최초 컴팩트 디스크 플레이어 'CDP-101' 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1979</h1>
+            <img src="./img/page/type15.jpg" alt="다른 이미지 찾기" />
+            <p>휴대용 CD 플레이어 'D-50'; 출시('Discman'이라 불림)</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1992</h1>
+            <img src="./img/page/type16.jpg" alt="다른 이미지 찾기" />
+            <p>'MZ-1'을 비롯한 미니디스크(MD) 시스템 4종 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1993</h1>
+            <img src="./img/page/다운로드.jpeg" alt="다른 이미지 찾기" />
+            <p>Sony Computer Entertainment 설립</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1994</h1>
+            <img src="./img/page/다운로드 (1).jpeg" alt="다른 이미지 찾기" />
+            <p>
+              Sony Computer Entertainment에서 Playstation (플레이스테이션) 출시
+            </p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>1996</h1>
+            <img src="./img/page/type17.jpg" alt="다른 이미지 찾기" />
+            <p>가정용 퍼스널 컴퓨터 'VAIO (바이오)' 시리즈 출시</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>1997</h1>
+            <img src="./img/page/type19.jpg" alt="다른 이미지 찾기" />
+            <p>평면 브라운관 탑재 'WEGA (베가)' 시리즈 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>2003</h1>
+            <img src="./img/page/type20.jpg" alt="다른 이미지 찾기" />
+            <p>
+              세계 최초 'Blu-ray Disc (블루레이 디스크)' 레코더 BDZ-S77 출시
+            </p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>2004</h1>
+            <img src="./img/page/다운로드 (2).jpeg" alt="다른 이미지 찾기" />
+            <p>
+              업계 최초로 디지털 시네마 프로젝터 세계 표준으로 DCI 추천 사양 4K
+              (4096H × 2160V)를 만족하는 초고 해상도 프로젝터용 LCD 디바이스 '4K
+              SXRD' 개발
+            </p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>2005</h1>
+            <img src="./img/page/type21.jpg" alt="다른 이미지 찾기" />
+            <p>고화질 평면 TV의 새로운 브랜드 'BRAVIA' 발표</p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>2007</h1>
+            <img src="./img/page/type22.jpg" alt="다른 이미지 찾기" />
+            <p>세계 최초 OLED TV 'XEL-1' 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>2013</h1>
+            <img src="./img/page/type23.jpg" alt="다른 이미지 찾기" />
+            <p>
+              High Resolution Audio 제품 공개 (HDD 오디오 플레이어 / 스테레오 및
+              DAC 앰프 / 헤드셋, 워크맨 등 포터블 오디오)
+            </p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+      <tr class="container">
+        <th class="right"></th>
+        <th class="left">
+          <div>
+            <h1>2018</h1>
+            <img src="./img/page/img_corpo_2018_1.jpg" alt="다른 이미지 찾기" />
+            <p>아이보(aibo) 2세대 출시</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="container">
+        <th class="right">
+          <div>
+            <h1>2020</h1>
+            <img src="./img/page/proto.jpg" alt="다른 이미지 찾기" />
+            <p>
+              소니가 개발했던 센서들을 바탕으로 과학의 집합체인 전기차
+              프로토타입 VISION-S 공개
+            </p>
+          </div>
+        </th>
+        <th class="left"></th>
+      </tr>
+    </table>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/biography.js"></script>
+  </body>
+</html>
