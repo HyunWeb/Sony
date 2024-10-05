@@ -1,9 +1,9 @@
+import { cumtomAlert } from "./alert.js";
 window.addEventListener("load", function () {
   let spArr = [];
   if (this.localStorage.getItem("spArr")) {
     spArr = JSON.parse(localStorage.getItem("spArr"));
   }
-  console.log(spArr);
   let popup = this.document.querySelector("#popup");
   let popupclose = this.document.querySelector("#popup > button");
   let popupbutton = this.document.querySelectorAll(".box > button");
@@ -20,6 +20,8 @@ window.addEventListener("load", function () {
   let spButton = this.document.querySelector(".formButton");
   let buyNumber = 1;
   let productPrice = 0;
+  let currentPrice;
+  let currentID;
   const optionName = {
     earphone_pink: "WF-1000XM5 스모키 핑크",
     earphone_platinum_silver: "WF-1000XM5 플래티넘 실버",
@@ -37,17 +39,19 @@ window.addEventListener("load", function () {
   // 장바구니 담기
   spButton.addEventListener("click", function () {
     if (!product.value) {
-      alert("제품이 선택되지 않았습니다.");
+      cumtomAlert("제품이 선택되지 않았습니다.", "warning");
       return;
     }
     const productsrc = product.value;
     const currentBuyNumber = buyNumber;
     let matchState = "no match";
     let spObject = {
+      id: currentID,
       productsrc: productsrc,
       productName: optionName[productsrc],
       currentBuyNumber: currentBuyNumber,
       totalvalue: totalMonyBox.innerHTML,
+      price: currentPrice,
     };
 
     for (let i = 0; i < spArr.length; i++) {
@@ -65,7 +69,7 @@ window.addEventListener("load", function () {
     console.log(spArr);
     // 배열을 문자열로 변환하여 Local Storage에 저장
     localStorage.setItem("spArr", JSON.stringify(spArr));
-    alert("물건이 장바구니에 담겼습니다.");
+    cumtomAlert("물건이 장바구니에 담겼습니다.", "success");
   });
   // 플러스 마이너스 버튼
   minButton.addEventListener("click", function () {
@@ -104,7 +108,7 @@ window.addEventListener("load", function () {
       popupbutton.forEach((item, index) => {
         item.addEventListener("click", function () {
           // 팝업창을 띄운다.
-          popup.style.opacity = "0.93";
+          popup.style.opacity = "1";
           popup.style.visibility = "visible";
           // 처음엔 갯수가 1개다.
           buyNumber = 1;
@@ -120,6 +124,7 @@ window.addEventListener("load", function () {
           while (product.children[1]) {
             product.removeChild(product.children[1]);
           }
+
           // 아이디와 일치하는 데이터만 올린다.
           data.forEach((data) => {
             if (index + 1 === data.id) {
@@ -135,7 +140,8 @@ window.addEventListener("load", function () {
               h3Element.innerHTML = data.name;
               pElement.innerHTML = data.ment;
               strongElement.innerHTML = data.price;
-
+              currentPrice = +data.pnumber;
+              currentID = data.id;
               imgContainer.appendChild(imgElement);
               productPopup.insertBefore(bElement, formElement);
               productPopup.insertBefore(h3Element, formElement);

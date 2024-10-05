@@ -157,3 +157,23 @@ body {
   background-color: #374c91;
   color: #f3f3f3;
 }
+
+.countButton {
+  width: 40px;
+  font-size: 20px;
+  height: 25px;
+}
+.spanElement {
+  width: 50px;
+  display: block;
+  text-align: center;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.selectDel {
+  margin-left: 100px;
+  font-size: 15px;
+}
