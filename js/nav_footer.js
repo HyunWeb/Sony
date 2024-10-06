@@ -20,40 +20,43 @@ window.addEventListener("load", function () {
       }
       let nav = this.document.querySelector("nav");
       nav.classList.add("toggleMenu");
-      if (this.window.innerWidth < 768 && this.window.innerWidth < 1220) {
-        let menuButton = document.createElement("button");
-        menuButton.classList.add("menuButton", "button");
-        // --------------- 버튼 아이콘 ---------------
-        let menuButtonsvgElement = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "svg"
-        );
-        menuButtonsvgElement.setAttribute(
-          "xmlns",
-          "http://www.w3.org/2000/svg"
-        );
-        menuButtonsvgElement.classList.add("bi", "bi-list");
-        menuButtonsvgElement.setAttribute("viewBox", "0 0 16 16");
+      // 버튼 제작
+      let menuButton = document.createElement("button");
+      menuButton.classList.add("menuButton", "button");
+      // --------------- 버튼 아이콘제작 ---------------
+      let menuButtonsvgElement = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "svg"
+      );
+      menuButtonsvgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+      menuButtonsvgElement.classList.add("bi", "bi-list");
+      menuButtonsvgElement.setAttribute("viewBox", "0 0 16 16");
 
-        let menuButtonpathElement1 = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "path"
-        );
-        menuButtonpathElement1.setAttribute("fill-rule", "evenodd");
-        menuButtonpathElement1.setAttribute(
-          "d",
-          "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-        );
+      let menuButtonpathElement1 = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path"
+      );
+      menuButtonpathElement1.setAttribute("fill-rule", "evenodd");
+      menuButtonpathElement1.setAttribute(
+        "d",
+        "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+      );
 
-        menuButtonsvgElement.appendChild(menuButtonpathElement1);
-        // --------------- 버튼 아이콘 ---------------
-        menuButton.appendChild(menuButtonsvgElement);
+      menuButtonsvgElement.appendChild(menuButtonpathElement1);
+      menuButton.addEventListener("click", function () {
+        nav.classList.toggle("toggleMenu");
+      });
+      // --------------- 버튼 아이콘 추가 ---------------
+      menuButton.appendChild(menuButtonsvgElement);
+      createButton();
+      this.window.addEventListener("resize", function () {
+        if (this.window.innerWidth < 768 && this.window.innerWidth < 1220) {
+          createButton();
+        }
+      });
+
+      function createButton() {
         nav.appendChild(menuButton);
-
-        menuButton.addEventListener("click", function () {
-          console.log(nav);
-          nav.classList.toggle("toggleMenu");
-        });
       }
     });
   this.fetch("/footer.html")
