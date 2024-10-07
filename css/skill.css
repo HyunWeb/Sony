@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: "GmarketSans", "Arial", sans-serif;
   background-color: lightgray;
@@ -7,6 +8,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Skills Section */
 .skills {
   display: flex;
   align-items: center;
@@ -14,14 +16,14 @@ body {
   flex-direction: row;
   position: relative;
   height: 500px;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 .skill-title {
-  font-family: "Gmarket Sans", sans-serif;
+  font-family: "GmarketSans", sans-serif;
   font-weight: 700;
-  font-size: 130px;
-  line-height: 140px;
+  font-size: 120px;
+  line-height: 130px;
   letter-spacing: 0.1em;
   color: #3f3f3f;
   margin-bottom: 10px;
@@ -35,9 +37,10 @@ body {
   background-color: #3f3f3f;
   position: absolute;
   left: -30px;
-  top: 75px;
+  top: 45px;
 }
 
+/* Product Image */
 .product-image {
   width: 400px;
   height: 400px;
@@ -52,31 +55,7 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 904px) {
-  .product-image {
-    width: 300px;
-    height: 300px;
-    display: block;
-    transform: translateX(100%);
-  }
-
-  .product-image.visible {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
+/* Grid Container */
 .container {
   max-width: 1100px;
   margin: 40px auto;
@@ -86,6 +65,7 @@ body {
   gap: 20px;
 }
 
+/* Box Styling */
 .box {
   background-color: lightgray;
   padding: 40px;
@@ -119,6 +99,7 @@ img {
   border-radius: 30px;
 }
 
+/* Headings */
 h1 {
   font-size: 40px;
   margin-top: 50px;
@@ -145,6 +126,7 @@ p {
   line-height: normal;
 }
 
+/* Icon Section */
 .section {
   background-color: #3f3f3f;
   border-radius: 52px 52px 0px 0px;
@@ -155,19 +137,13 @@ p {
   padding-top: 60px;
   padding-bottom: 25px;
 }
+
 .section > h2 {
   color: white;
   margin-bottom: 2%;
 }
 
-#env {
-  background-image: url("../img/sony.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-}
-
+/* Icon Container */
 .icon-container {
   display: flex;
   justify-content: space-around;
@@ -198,18 +174,22 @@ p {
   transform: scale(1.2);
 }
 
+/* Media Queries */
+
+
 @media (max-width: 904px) {
+  .skills {
+    height: auto;
+    flex-direction: column;
+  }
+
   .skill-title {
-    font-size: 130px;
-    line-height: 140px;
+    font-size: 80px;
+    line-height: 100px;
   }
   .skill-title::after {
     content: "";
-    height: 300px;
-  }
-
-  .product-image {
-    display: none;
+    height: 200px;
   }
 
   .inner-box-container {
@@ -232,25 +212,30 @@ p {
   }
 }
 
+
+/* Tablet Devices */
 @media (max-width: 768px) {
   .skills {
     flex-direction: column;
     height: auto;
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
   .skill-title {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 80px;
+    line-height: 90px;
     margin-top: 30px;
   }
 
   .skill-title::after {
-    content: "";
-    width: 10px;
-    height: 150px;
+    width: 15px;
+    height: 170px;
     left: -20px;
-    top: 50px;
+    top: 45px;
+  }
+
+  .product-image {
+    display: none;
   }
 
   h1 {
@@ -259,7 +244,7 @@ p {
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   h3 {
@@ -270,13 +255,13 @@ p {
     padding: 20px;
   }
 
-  .icon {
-    width: 70px;
-    height: 70px;
-  }
-
   .icon-container {
     flex-wrap: wrap;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
   }
 
   .inner-box-container {
@@ -284,28 +269,26 @@ p {
   }
 
   .inner-box {
-    margin: 0 0 20px 0;
-    text-align: center;
+    margin: 0;
   }
 }
 
+
+/* Mobile Devices */
 @media (max-width: 480px) {
   .skills {
     flex-direction: column;
-    height: auto;
-    padding-top: 20px;
     padding: 10px;
   }
 
   .skill-title {
     font-size: 60px;
-    line-height: 60px;
-    margin-top: 55px;
+    line-height: 65px;
+    margin-top: 80px;
   }
 
   .skill-title::after {
-    content: "";
-    width: 8px;
+    width: 10px;
     height: 100px;
     left: -15px;
     top: 40px;
@@ -314,12 +297,10 @@ p {
   h1 {
     font-size: 24px;
     margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   h2 {
     font-size: 18px;
-    margin-bottom: 10px;
   }
 
   h3 {
@@ -333,13 +314,11 @@ p {
 
   .box {
     padding: 15px;
-    margin-bottom: 20px;
   }
 
   .icon {
     width: 50px;
     height: 50px;
-    margin: 10px;
   }
 
   .icon-container {
@@ -354,12 +333,9 @@ p {
   }
 
   .inner-box {
-    margin-bottom: 10px;
-    text-align: center;
-    width: 100%;
+    margin: 0;
   }
 
   .section {
     padding: 20px 0;
   }
-}
