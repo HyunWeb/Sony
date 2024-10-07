@@ -1,4 +1,25 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
+  th img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .left {
+    padding-left: 10px;
+  }
+  .right {
+    padding-right: 10px;
+  }
+  .v-line {
+    height: 5700px;
+  }
+  th p {
+    font-size: 10px;
+    width: 170px;
+  }
+}
+
+@media screen and (min-width: 600px) {
   th img {
     width: 200px;
     height: 200px;
