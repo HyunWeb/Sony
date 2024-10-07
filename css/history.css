@@ -1,8 +1,3 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  font-size: 20px;
-}
 body {
   background-color: #dadada;
   overflow-y: scroll;
@@ -48,12 +43,11 @@ body {
 
 /* 2 */
 .btn-2 {
-  margin: 200px;
   background: #1e3990;
   border: none;
   color: white;
   width: 150px;
-  font-size: 15px;
+  height: 50px;
 }
 .btn-2:before {
   height: 0%;
@@ -82,7 +76,7 @@ body {
   align-items: center;
 }
 
-.container-button > button {
+.container-button > .button {
   width: 150px;
   height: 50px;
   background-color: white;
@@ -153,11 +147,33 @@ body {
   border: 1px solid black;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 569px) {
+  .btn-2 {
+    margin: 70px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 120px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
   .main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .btn-2 {
+    margin: 200px;
+    font-size: 15px;
+    font-weight: bold;
   }
 
   .main > div {
