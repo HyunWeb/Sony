@@ -1,4 +1,16 @@
 window.addEventListener("load", function () {
+  let headphonePoint = this.document.querySelector(
+    "#bestsellerWrap > div:nth-child(2) > h3"
+  );
+  let headphonebox = this.document.querySelector(
+    "#bestsellerWrap > div:nth-child(2)"
+  );
+  let headphonePointData = headphonePoint.getBoundingClientRect();
+  let headPhonePointRes = window.innerHeight - headphonePointData.top;
+  this.window.addEventListener("resize", function () {
+    headPhonePointRes = window.innerHeight - headphonePointData.top;
+  });
+  console.log(headPhonePointRes);
   let headphone = this.document.querySelector("#headPhone");
   let earphone = this.document.querySelector("#earphone");
   let speaker = this.document.querySelector("#speaker");
@@ -20,6 +32,8 @@ window.addEventListener("load", function () {
     let skillTitleData = skillTitle.getBoundingClientRect();
     let skillimageData = skillimage.getBoundingClientRect();
     let companyTitleData = companyTitle.getBoundingClientRect();
+    let headPhonePointRes = window.innerHeight - headphonePointData.top;
+    console.log(headphonePointData.top);
     if (this.window.innerWidth < 768) {
       MBcontrolHeadphone(data, event);
       MBcontrolOtherProduct(bestSellerData);
@@ -40,7 +54,7 @@ window.addEventListener("load", function () {
 
   function TBcontrolHeadphone(data, event) {
     if (event.deltaY > 0 && data > 50) {
-      headphone.style.bottom = "-87%";
+      headphone.style.bottom = `${headPhonePointRes}px`;
       headphone.style.transform = "translate(-50%, 0) scale(1)";
       earphone.style.transform = "";
       speaker.style.transform = "";
@@ -51,7 +65,7 @@ window.addEventListener("load", function () {
   }
   function MBcontrolHeadphone(data, event) {
     if (event.deltaY > 0 && data > 50) {
-      headphone.style.bottom = "-82%";
+      headphone.style.bottom = `${headPhonePointRes}px`;
       headphone.style.transform = "translate(-50%, 0) scale(1)";
       earphone.style.transform = "";
       speaker.style.transform = "";
@@ -62,9 +76,10 @@ window.addEventListener("load", function () {
   }
   function controlHeadphone(data, event) {
     if (event.deltaY > 0 && data > 50) {
-      headphone.style.bottom = "-62%";
+      headphone.style.bottom = `${headPhonePointRes}px`;
       headphone.style.transform = "translate(-50%, 0) scale(1)";
     } else if (event.deltaY < 0 && data < 800) {
+      headphonebox.style.position = "static";
       headphone.style.bottom = "";
       headphone.style.transform = "";
     }

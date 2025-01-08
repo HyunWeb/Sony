@@ -66,7 +66,6 @@ window.addEventListener("load", function () {
       }
     }
     if (matchState === "no match") spArr.push(spObject);
-    console.log(spArr);
     // 배열을 문자열로 변환하여 Local Storage에 저장
     localStorage.setItem("spArr", JSON.stringify(spArr));
     cumtomAlert("물건이 장바구니에 담겼습니다.", "success");
