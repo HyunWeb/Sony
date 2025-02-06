@@ -4,6 +4,15 @@
 부트캠프에서 학습한 HTML, CSS, JavaScript, jQuery를 활용하여 팀 프로젝트로 진행한 소니 음향기기 홈페이지 리뉴얼입니다.  
 소니의 기존 홈페이지는 여러 전자기기를 복합적으로 다루고 있었으나, 이번 프로젝트에서는 **소니 음향기기 사업**에 초점을 맞춘 전문 홈페이지를 제작하였습니다.  
 
+## 🛠️ 사용한 기술 스택
+### 디자인
+<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
+
+### 프론트엔드
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
+
+---
+
 ### 📅 프로젝트 기간  
 총 10일  
 
@@ -12,14 +21,6 @@
   - **팀장**: 프로젝트 전반 관리 및 메인 페이지 제작, 전체 디자인 총괄  
   - 팀원 1: 회사 연혁 페이지 제작  
   - 팀원 2: 소니 기술력 페이지 제작
----
-
-## 🔧 기술 스택  
-- HTML5 / CSS3 / JavaScript (ES6)  
-- jQuery  
-- Figma  
-- Git / GitHub  
-
 ---
 
 ## 🛠️ 주요 기능 및 구현  
