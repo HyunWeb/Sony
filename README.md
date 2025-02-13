@@ -1,6 +1,6 @@
 # 🎧 Sony 홈페이지 리뉴얼 
 
-<img width="1919" alt="스크린샷 2025-02-11 오후 7 16 05" src="https://github.com/user-attachments/assets/36d050ce-44a4-4a89-ab23-1763aea565f4" />
+<img width="1753" alt="스크린샷 2025-02-13 오후 6 10 56" src="https://github.com/user-attachments/assets/07544910-4b6b-4c4d-89e7-8b19a682fca4" />
 
 
 ## 📜 프로젝트 소개  
